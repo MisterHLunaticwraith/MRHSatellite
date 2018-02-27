@@ -8,7 +8,7 @@ class CfgPatches {
 		}; //
 		weapons[] = {"MRH_BluForTransponder"}; //
 		requiredVersion = 0.1; //
-		requiredAddons[] = {"A3_Weapons_F_Ammoboxes"}; //
+		requiredAddons[] = {"A3_Weapons_F_Ammoboxes","cba_settings"}; //
 	};
 };
 
@@ -58,9 +58,21 @@ class Extended_PostInit_EventHandlers
 {
    class MRHSatInit
    {
-      clientInit = "call compile preProcessFileLineNumbers '\MRHSatellite\Functions\fn_KeyBinds.sqf'";
+      clientInit = "call compile preProcessFileLineNumbers '\MRHSatellite\Functions\fn_CheckForAce.sqf'";
    };
 };
 
-
-
+class Extended_PreInit_EventHandlers 
+{
+    class MRHSatKeyBinds 
+	{
+        init = "call compile preProcessFileLineNumbers '\MRHSatellite\Functions\fn_KeyBinds.sqf'";
+		
+    };
+	class MRHSatSettings
+	{
+		init = "call compile preProcessFileLineNumbers '\MRHSatellite\Functions\fn_ModSettings.sqf'";
+		
+		
+	};
+};

@@ -26,6 +26,7 @@ case (!_firstinit): {
 ctrlShow [5001, true];
 ctrlShow [1600, false];
 ctrlShow [1601, false];
+
 buttonSetAction [5003, "call MRH_fnc_AcceptFirstInit"];
 _ctrlTEXTZONE =((findDisplay 9751) displayCtrl 5006);
 _ctrlTEXTZONE ctrlSetStructuredText parsetext (localize "STR_MRH_INITQUESTION");

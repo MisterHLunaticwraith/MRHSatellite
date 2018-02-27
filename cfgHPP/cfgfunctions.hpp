@@ -45,8 +45,9 @@ class MRH // Defines the "owner"
 		/*
 		class KeyBinds
 		{
-			postInit=1;
-			preInit=1;
+			prestart=1;
+			
+			
 		};
 		*/
 		class RegisterKeyPress
@@ -76,6 +77,8 @@ class MRH // Defines the "owner"
 		class FirstSatMove
 		{};
 		class isSatMonitor
+		{};
+		class ApplyFullScreenSettings
 		{};
 
 

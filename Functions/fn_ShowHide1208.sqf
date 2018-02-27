@@ -8,6 +8,9 @@ ctrlshow [1206,true];
 ctrlshow [1207,true];
 ctrlshow [1202,true];
 ctrlshow [1209,true];
+
+_showFullscreen = ["MRH_SAT_allowFullscreen"] call cba_settings_fnc_get;
+ctrlshow [1209, _showFullscreen];
 };
 case !_show : {
 ctrlshow [1231,false];

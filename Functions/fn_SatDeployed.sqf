@@ -1,3 +1,4 @@
+#include "MRH_components.hpp"
 _bag = player getVariable "SourceBag";
 _laptop = "Land_Laptop_device_F" createVehicle (_bag modelToWorld [0,1,0]);
 _laptop setDir ((getDir _laptop)-180);
@@ -6,8 +7,28 @@ _sat setDir ((getDir _laptop)-360 + 180);
 _laptop setVariable ["LinkedAntenna", _sat]; 
 deleteVehicle objectParent _bag;
 
+if !(HASACE3) then {[
+[_laptop],{
+params ["_laptop"];
+[_laptop] call MRH_fnc_isSatMonitor;
+_laptop addAction [localize "STR_MRH_ADDACTIONUSE",{call MRH_fnc_SatInit;}];
+_laptop addAction [localize "STR_MRH_ADDACTIONREPACK",{
+ _laptop = _this select 0;
+ _sat = _laptop getVariable "LinkedAntenna";
+ _storepos = (position _laptop);
+ 
+ deleteVehicle _sat;
+ deleteVehicle _laptop;
+// "B_Carryall_satellite" createVehicle _storepos;
+"B_Carryall_satellite" createVehicle (position player);
+}];
+
+}] RemoteExec ["Spawn", 0, true];} 
 
 
+
+
+else {
 ////////
 [[_laptop],{
 params ["_laptop"];
@@ -46,3 +67,4 @@ _2,
  ////
  [_laptop, 0, ["ACE_MainActions"], _action2] call ace_interact_menu_fnc_addActionToObject;
  }] RemoteExec ["Spawn", 0, true];
+ };

@@ -1,6 +1,7 @@
 ////////////////////////////////////////////////////////////////////
 //BEGIN FULLSCREEN
 ///////////////////////////////////////////////////////////////////
+
 class MRHSatelliteFullSCreen
 {
 	idd=9751;
@@ -81,7 +82,7 @@ class MRHSlider: RscSliderMRHSAT
 	    color[] = { 1, 1, 1, 1 }; 
         coloractive[] = { 1, 0, 0, 0.5 };
 	//onLoad = "call MRH_fnc_SetSatRange;";
-	onSliderPosChanged = "((findDisplay 9751) displayCtrl 1205) ctrlSetStructuredText parsetext (str (round (_this select 1))); _cam = missionNamespace getVariable ""SATCAM""; _cam setPos [(getpos _cam select 0), (getpos _cam select 1), (_this select 1)];";
+	onSliderPosChanged = "((findDisplay 9751) displayCtrl 1205) ctrlSetStructuredText parsetext (str (round (_this select 1))); _cam = player getVariable ""SATCAM""; _cam setPos [(getpos _cam select 0), (getpos _cam select 1), (_this select 1)];call MRH_fnc_GlobalCamMove;";
 };
 /*
 	};
@@ -130,6 +131,7 @@ class MRHSelectView: RscComboMRHSAT
 class MRHScanIcon: RscPictureMRHSAT
 {
 	idc = 5202;
+	//onload = "if !(SETTINGSALLOWTARGETDETECTION) then {ctrlshow [5202,false];};";
 	text = "\MRHSatellite\Paa\iconscan.paa";
 	x = 0.00125001 * safezoneW + safezoneX;
 	y = -0.00399999 * safezoneH + safezoneY;
@@ -233,6 +235,7 @@ class MRHTrackingtext: RscStructuredTextMRHSAT
 class MRHStaticsoverlay: RscPictureMRHSAT
 {
 	idc = 1333;
+	onLoad = "call MRH_fnc_ApplyFullScreenSettings";
 	text = "\MRHSatellite\Paa\overlaystatics.paa";
 	
 		colorText[] = 
