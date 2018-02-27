@@ -8,7 +8,7 @@ class CfgPatches {
 		}; //
 		weapons[] = {"MRH_BluForTransponder"}; //
 		requiredVersion = 0.1; //
-		requiredAddons[] = {"A3_Weapons_F_Ammoboxes","cba_settings"}; //
+		requiredAddons[] = {"cba_settings","A3_Weapons_F_Ammoboxes"}; //
 	};
 };
 
