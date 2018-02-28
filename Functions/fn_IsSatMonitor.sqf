@@ -1,4 +1,8 @@
 params ["_object"];
+[_object] spawn {
+params ["_object"];
+//waituntil mission is initialized
+waitUntil {time>1};
 _camMRHSAT = player getVariable "SATCAM";
 _pip = missionNamespace getVariable "SelectedViewMode";
 //added in 1.3
@@ -8,3 +12,4 @@ _camMRHSAT cameraEffect ["internal","back","rttMRHSatelliteFeed"];
 _camMRHSAT camCommit 0;
 "rttMRHSatelliteFeed" setPiPEffect [_pip]; 
 _object setObjectTexture [0, "#(argb,512,512,1)r2t(rttMRHSatelliteFeed,1.0)"];
+};

@@ -15,7 +15,7 @@ _cam = player getVariable "SATCAM";
 if (isNil "_cam") ExitWith {};
 _camtarget = missionNamespace getVariable "SATCAMTARGET";
 _both = [_cam,_camtarget];
-
+_maxHeight = ["MRH_SAT_MaxSatAltitude"] call cba_settings_fnc_get;
 
 if (isnull (FindDisplay 9751)) exitWith {}; //ahmodifsurcam
 switch (true) do {
@@ -33,7 +33,7 @@ sliderSetPosition [1202, (getPos _cam select 2)-10]; _cam setPos [(getpos _cam s
 };
 case (_key == 7) : {
 _limit = getPos _cam select 2;
-if (_limit >295) exitWith {};
+if (_limit >_maxHeight - 5) exitWith {};
 sliderSetPosition [1202, (getPos _cam select 2)+10]; _cam setPos [(getpos _cam select 0), (getpos _cam select 1), (getPos _cam select 2)+10];
 ((findDisplay 9751) displayCtrl 1205) ctrlSetStructuredText parsetext (str (round (getpos _cam select 2)));
 };
