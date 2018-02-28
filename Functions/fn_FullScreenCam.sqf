@@ -40,4 +40,5 @@ lbSetData [2100, 1, 1];
 
 _ctrlCOMBO lbadd localize "STR_MRH_FLIRBHOT";
 lbSetData [2100, 2, 2]; 
+call MRH_fnc_Compass;
 };

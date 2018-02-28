@@ -80,6 +80,8 @@ class MRH // Defines the "owner"
 		{};
 		class ApplyFullScreenSettings
 		{};
+		class Compass
+		{};
 
 
 	};	

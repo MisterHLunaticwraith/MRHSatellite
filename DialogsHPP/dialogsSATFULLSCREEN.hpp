@@ -229,8 +229,26 @@ class MRHTrackingtext: RscStructuredTextMRHSAT
 	w = 0.118125 * safezoneW;
 	h = 0.028 * safezoneH;
 };
-
-
+//added in v1.4
+class MRHCompass: RscPictureMRHSAT
+{
+	idc = 1215;
+	text = "\MRHSatellite\Paa\compass.paa";
+	x = 0.808438 * safezoneW + safezoneX;
+	y = 0.808 * safezoneH + safezoneY;
+	w = 0.07875 * safezoneW;
+	h = 0.126 * safezoneH;
+};
+class MRHBearingText: RscStructuredTextMRHSAT
+{
+	idc = 1105;
+	text = "BEARING 360"; //--- ToDo: Localize;
+	x = 0.808438 * safezoneW + safezoneX;
+	y = 0.766 * safezoneH + safezoneY;
+	w = 0.07875 * safezoneW;
+	h = 0.028 * safezoneH;
+};
+//end add
 
 class MRHStaticsoverlay: RscPictureMRHSAT
 {
