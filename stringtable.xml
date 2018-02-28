@@ -290,6 +290,53 @@
 				<French>Déployer la console de contrôle du satellite.</French>
 			</Key>
 		</Container>
+		<Container name="CBAOptions">
+			<Key ID="STR_MRH_SETTINGSALLOWFULLSCREENTEXT">
+				<Original>Allow fullscreen mode</Original>
+				<English>Allow fullscreen mode</English>
+				<French>Autoriser le mode plein écran</French>
+			</Key>
+			<Key ID="STR_MRH_SETTINGSALLOWFULLSCREENTOOLTIP">
+				<Original>Untick if you do not want players to have access to fullscreen mode and features</Original>
+				<English>Untick if you do not want players to have access to fullscreen mode and features</English>
+				<French>Décocher pour interdire l'accès au mode plein écran et ses actions avancées</French>
+			</Key>
+			<Key ID="STR_MRH_SETTINGSALLOWLASERINGTEXT">
+				<Original>Allow lasering</Original>
+				<English>Allow lasering</English>
+				<French>Autoriser le marquage laser</French>
+			</Key>
+			<Key ID="STR_MRH_SETTINGSALLOWLASERINGTOOLTIP">
+				<Original>Untick to disable target lasering</Original>
+				<English>Untick to disable target lasering</English>
+				<French>Décocher pour interdire le marquage laser</French>
+			</Key>
+			<Key ID="STR_MRH_SETTINGSALLOWTARGETDETECTIONTEXT">
+				<Original>Allow target detection</Original>
+				<English>Allow target detection</English>
+				<French>Autoriser la détection de cible</French>
+			</Key>
+			<Key ID="STR_MRH_SETTINGSALLOWTARGETDETECTIONTOOLTIP">
+				<Original>Untick to disable target detection</Original>
+				<English>Untick to disable target detection</English>
+				<French>Décocher pour interdire la détection de cibles</French>
+			</Key>
+			<Key ID="STR_MRH_SETTINGSALLOWTARGETTRACKINGTEXT">
+				<Original>Allow target tracking</Original>
+				<English>Allow target tracking</English>
+				<French>Autoriser le suivit de cible</French>
+			</Key>
+			<Key ID="STR_MRH_SETTINGSALLOWTARGETTRACKINGTOOLTIP">
+				<Original>Untick to disable target tracking</Original>
+				<English>Untick to disable target tracking</English>
+				<French>Décocher pour interdire le suivit de la cible</French>
+			</Key>
+			
+			
+			
+			
+		</Container>
+
 
 	</Package>
 </Project>

@@ -112,7 +112,7 @@ class MRHSlider: RscSliderMRHSAT
 	    color[] = { 1, 1, 1, 1 }; 
         coloractive[] = { 1, 0, 0, 0.5 };
 	//onLoad = "call MRH_fnc_SetSatRange;";
-	onSliderPosChanged = "((findDisplay 9751) displayCtrl 1205) ctrlSetStructuredText parsetext (str (round (_this select 1))); _cam = missionNamespace getVariable ""SATCAM""; _cam setPos [(getpos _cam select 0), (getpos _cam select 1), (_this select 1)];";
+	onSliderPosChanged = "((findDisplay 9751) displayCtrl 1205) ctrlSetStructuredText parsetext (str (round (_this select 1))); _cam = player getVariable ""SATCAM""; _cam setPos [(getpos _cam select 0), (getpos _cam select 1), (_this select 1)];call MRH_fnc_GlobalCamMove;";
 };
 /*
 	};
