@@ -12,7 +12,10 @@ ctrlshow [1215,true];
 ctrlshow [1105,true];
 _showFullscreen = ["MRH_SAT_allowFullscreen"] call cba_settings_fnc_get;
 ctrlshow [1209, _showFullscreen];
+ctrlshow [1106,true];
+ctrlshow [1107,true];
 call MRH_fnc_Compass;
+call MRH_fnc_ElevationAndGrid;
 };
 case !_show : {
 ctrlshow [1231,false];
@@ -24,5 +27,7 @@ ctrlshow [1202,false];
 ctrlshow [1209,false];
 ctrlshow [1215,false];
 ctrlshow [1105,false];
+ctrlshow [1106,false];
+ctrlshow [1107,false];
 };
 };

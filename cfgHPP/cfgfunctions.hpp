@@ -82,6 +82,8 @@ class MRH // Defines the "owner"
 		{};
 		class Compass
 		{};
+		class ElevationAndGrid
+		{};
 
 
 	};	
