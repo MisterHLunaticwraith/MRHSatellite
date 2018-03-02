@@ -14,9 +14,14 @@ case (_color == "white") : {_color = "\MRHSatellite\paa\white.paa";};
 
 
 disableSerialization;
-
-_uniqueID = [random [500, 2500, 5000],0] call bis_fnc_cutdecimals;
-_newId = _uniqueID +1;
+private ["_newID", "_uniqueID"];
+_uniqueID = call MRH_fnc_RandomDisplayID;
+//hint str _uniqueID;
+ //waitUntil {!isNil "_uniqueID"};
+//_uniqueID =[random [500, 2500, 5000],0] call bis_fnc_cutdecimals;
+_newId = call MRH_fnc_RandomDisplayID;
+ //waitUntil {!isNil "_newID"};
+//_newID =_uniqueID +1;
 _tracking = true;
 uinameSpace setVariable ["tracking", true];
 publicVariable "tracking";
@@ -55,6 +60,7 @@ with uiNamespace do {
  
  ((findDisplay 9751) displayCtrl _uniqueID) ctrlAddEventHandler ["Mouseenter", {
  disableSerialization;//
+ private ["_selectedCtrl","_sentobj", "_uniqueID"];
  _selectedCtrl = (_this select 0); 
  
  _sentobj = _selectedCtrl getVariable "MRH_CtrlVar_SentObj";
@@ -114,5 +120,6 @@ ctrlDelete ((findDisplay 9751) displayCtrl _uniqueID);
 };
 //added in v1.4
 if (ctrlShown ((findDisplay 9751) displayCtrl _newId)) then {ctrlDelete ((findDisplay 9751) displayCtrl _newId); };
+call MRH_fnc_ResetUsedIDCs;
 //endadded
 

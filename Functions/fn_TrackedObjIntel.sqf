@@ -5,7 +5,10 @@ params ["_sentobj","_uniqueID"];
 disableSerialization;
 //systemchat format ["ctrl %1 obj %2", str _selectedCtrl, str _sentobj];
 ///create the scructured text:
- _newID = _uniqueID + 2;
+private ["_newID","_uniqueID"];
+ _newID =call MRH_fnc_RandomDisplayID;
+  waitUntil {!isNil "_newID"};
+//= _uniqueID + 2;
  _position = ctrlPosition ((findDisplay 9751) displayCtrl _uniqueID);
  _x = _position select 0;
  _y = _position select 1;
@@ -39,5 +42,5 @@ while {ctrlShown ((findDisplay 9751) displayCtrl _uniqueID)} do {
 };
 //systemChat "loopout";
 if (ctrlShown ((findDisplay 9751) displayCtrl _newId)) then {ctrlDelete ((findDisplay 9751) displayCtrl _newId); };
-
+call MRH_fnc_ResetUsedIDCs;
 };

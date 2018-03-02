@@ -3,8 +3,9 @@ params ["_object"];
 [_object] spawn {
 params ["_object"];
 //waituntil mission is initialized
+waitUntil {!isNull (player getVariable "SATCAM")};
 _camMRHSAT = player getVariable "SATCAM";
-waitUntil {(!isNull (findDisplay 46)) && alive player && !(isNil "_camMRHSAT");};
+waitUntil {(!isNull (findDisplay 46)) && alive player};
 //waitUntil {time>1};
 
 _pip = missionNamespace getVariable "SelectedViewMode";

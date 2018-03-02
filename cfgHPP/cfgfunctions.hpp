@@ -88,6 +88,10 @@ class MRH // Defines the "owner"
 		{};
 		class TrackedObjIntel
 		{};
+		class RandomDisplayID
+		{};
+		class ResetUsedIDcs
+		{};
 
 
 	};	

@@ -7,7 +7,10 @@ params ["_selectedCtrl","_sentobj","_uniqueID"];
 
 //systemchat format ["ctrl %1 obj %2", str _selectedCtrl, str _sentobj];
 ///create the scructured text:
- _newID = _uniqueID + 2;
+private ["_newID"];
+ _newID = call MRH_fnc_RandomDisplayID;
+ waitUntil {!isNil "_newID"};
+// _uniqueID + 2;
  _position = ctrlPosition ((findDisplay 9751) displayCtrl _uniqueID);
  _x = _position select 0;
  _y = _position select 1;
