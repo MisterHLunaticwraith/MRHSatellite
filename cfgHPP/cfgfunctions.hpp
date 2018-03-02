@@ -84,6 +84,10 @@ class MRH // Defines the "owner"
 		{};
 		class ElevationAndGrid
 		{};
+		class BluForMouseOver
+		{};
+		class TrackedObjIntel
+		{};
 
 
 	};	

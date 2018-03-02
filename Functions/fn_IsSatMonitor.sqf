@@ -1,9 +1,12 @@
+if (isServer && !hasInterface) ExitWith {};
 params ["_object"];
 [_object] spawn {
 params ["_object"];
 //waituntil mission is initialized
-waitUntil {time>1};
 _camMRHSAT = player getVariable "SATCAM";
+waitUntil {(!isNull (findDisplay 46)) && alive player && !(isNil "_camMRHSAT");};
+//waitUntil {time>1};
+
 _pip = missionNamespace getVariable "SelectedViewMode";
 //added in 1.3
 if (isNil "_pip") then {_pip =0};
