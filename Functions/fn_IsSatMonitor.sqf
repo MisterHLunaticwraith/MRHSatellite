@@ -2,6 +2,7 @@ if (isServer && !hasInterface) ExitWith {};
 params ["_object"];
 [_object] spawn {
 params ["_object"];
+waitUntil {!(missionNamespace getVariable "MRHSatFirstInitCheck")};
 //waituntil mission is initialized
 waitUntil {!isNull (player getVariable "SATCAM")};
 _camMRHSAT = player getVariable "SATCAM";
