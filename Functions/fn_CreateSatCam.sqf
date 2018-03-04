@@ -13,5 +13,5 @@ _camMRHSAT setVectorDirAndUp [[0,0,-1],[0,1,0]];
 //_camMRHSAT cameraEffect ["internal", "BACK"];//internal
 _camMRHSAT camSetFov 1;
 _camMRHSAT camCommit 0;
-player setVariable ["SATCAM", _camMRHSAT];
+player setVariable ["MRH_SATCAM", _camMRHSAT];
 

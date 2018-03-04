@@ -41,9 +41,9 @@ publicVariable "MRHSatPos";
 _posX = _selectedPos select 0;
 _posY = _selectedPos select 1;
 
-_cam = player getVariable "SATCAM";
+_cam = player getVariable "MRH_SATCAM";
 _cam setPos [_posX , _posY, (getPos _cam select 2)];
-call MRH_fnc_GlobalCamMove;
+[player] call MRH_fnc_GlobalCamMove;
 call MRH_fnc_FirstSatMove;
 disableserialization;
 ctrlshow [6203, false];

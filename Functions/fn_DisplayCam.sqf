@@ -1,5 +1,5 @@
 
-_camMRHSAT = player getVariable "SATCAM";
+_camMRHSAT = player getVariable "MRH_SATCAM";
 _pip = missionNamespace getVariable "SelectedViewMode";
 
 _TypeText = ((findDisplay 9751) displayCtrl 1207);
@@ -11,3 +11,4 @@ playSound "visionswitch";
 
 //ctrlshow [1208, true];
 [true] call MRH_fnc_ShowHide1208;
+call MRH_fnc_GlobalPipRefresh;

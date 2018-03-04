@@ -1,6 +1,6 @@
 [] spawn {
 disableSerialization;
-_camera = player GetVariable "SATCAM";
+_camera = player GetVariable "MRH_SATCAM";
 
 waitUntil {ctrlshown ((findDisplay 9751)displayCtrl 1106)};
 

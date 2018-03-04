@@ -1,4 +1,4 @@
-_cam = player getVariable "SATCAM";
+_cam = player getVariable "MRH_SATCAM";
 _pos = getPos _cam;
 "SatPosMarker" setMarkerPos [_pos select 0, _pos select 1];
 "SatPosMarker" setMarkerText localize "STR_MRH_PRESENTPOSITIONMARKER";

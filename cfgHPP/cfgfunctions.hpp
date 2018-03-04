@@ -92,6 +92,10 @@ class MRH // Defines the "owner"
 		{};
 		class ResetUsedIDcs
 		{};
+		class GlobalPipRefresh
+		{};
+		class TrackingTarget
+		{};
 
 
 	};	

@@ -11,9 +11,9 @@
 
 params ["_key"];
 
-_cam = player getVariable "SATCAM";
+_cam = player getVariable "MRH_SATCAM";
 if (isNil "_cam") ExitWith {};
-_camtarget = missionNamespace getVariable "SATCAMTARGET";
+_camtarget = missionNamespace getVariable "MRH_SATCAMTARGET";
 _both = [_cam,_camtarget];
 _maxHeight = ["MRH_SAT_MaxSatAltitude"] call cba_settings_fnc_get;
 
@@ -38,4 +38,4 @@ sliderSetPosition [1202, (getPos _cam select 2)+10]; _cam setPos [(getpos _cam s
 ((findDisplay 9751) displayCtrl 1205) ctrlSetStructuredText parsetext (str (round (getpos _cam select 2)));
 };
 };
-call MRH_fnc_GlobalCamMove;
+[player] call MRH_fnc_GlobalCamMove;
