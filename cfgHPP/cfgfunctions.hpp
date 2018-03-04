@@ -80,6 +80,7 @@ class MRH // Defines the "owner"
 		{};
 		class ApplyFullScreenSettings
 		{};
+
 		class Compass
 		{};
 		class ElevationAndGrid
@@ -96,6 +97,7 @@ class MRH // Defines the "owner"
 		{};
 		class TrackingTarget
 		{};
+
 
 
 	};	

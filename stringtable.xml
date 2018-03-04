@@ -331,6 +331,7 @@
 				<English>Untick to disable target tracking</English>
 				<French>Décocher pour interdire le suivit de la cible</French>
 			</Key>
+
 			<Key ID="STR_MRH_SETTINGSSETRANGETEXT">
 				<Original>Set satellite height range.</Original>
 				<English>Set satellite height range.</English>
@@ -341,6 +342,7 @@
 				<English>With this setting you can set the satellite's max height(default is 300m)</English>
 				<French>Ce réglage permet de fixer l'altitude maximum du satellite (par défaut 300m)</French>
 			</Key>
+
 			
 			
 			
