@@ -13,7 +13,8 @@ closedialog 0;
 //_camtarget = "camera" camCreate (camMRHSAT modelToWorld [0,0.1,-300]);
 //_camMRHSAT camSetTarget _camtarget;
 _camMRHSAT setVectorDirAndUp [[0,0,-1],[0,1,0]]; //cam camcommit 0;
-_camMRHSAT cameraEffect ["internal", "BACK"];//internal
+_camMRHSAT cameraEffect ["internal", "BACK"];//editedin v1.3 if notworking reverse
+//_camMRHSAT cameraEffect ["internal", "BACK","rttMRHSatelliteFeed"];//editedin v1.3 if notworking reverse
 _camMRHSAT camSetFov 1;
 _camMRHSAT camCommit 0;
 //missionNamespace setVariable ["SATCAM", camMRHSAT];
@@ -40,4 +41,6 @@ lbSetData [2100, 1, 1];
 
 _ctrlCOMBO lbadd localize "STR_MRH_FLIRBHOT";
 lbSetData [2100, 2, 2]; 
+call MRH_fnc_Compass;
+call MRH_fnc_ElevationAndGrid;
 };

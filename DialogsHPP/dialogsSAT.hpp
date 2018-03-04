@@ -247,7 +247,50 @@ class MRHWarningBoxText: RscStructuredTextMRHSAT
 };
 	};
 };
+//added in 1.4
+class MRHCompass: RscPictureMRHSAT
+{
+	idc = 1215;
+	show = false;
+	text = "\MRHSatellite\Paa\compass.paa";
+	x = 0.637812 * safezoneW + safezoneX;
+	y = 0.472 * safezoneH + safezoneY;
+	w = 0.0590625 * safezoneW;
+	h = 0.098 * safezoneH;
+};
+class MRHBearingText: RscStructuredTextMRHSAT
+{
+	idc = 1105;
+	show = false;
+	text = "bearing 360"; //--- ToDo: Localize;
+	x = 0.63125 * safezoneW + safezoneX;
+	y = 0.444 * safezoneH + safezoneY;
+	w = 0.065625 * safezoneW;
+	h = 0.028 * safezoneH;
+};
 
+class MRHElevationDisplay: RscStructuredTextMRHSAT
+{
+	idc = 1106;
+	show = false;
+	text = "Terrain elevation: 1200m"; //--- ToDo: Localize;
+	x = 0.276875 * safezoneW + safezoneX;
+	y = 0.472 * safezoneH + safezoneY;
+	w = 0.137812 * safezoneW;
+	h = 0.028 * safezoneH;
+};
+class MRHGridCoordDisplay: RscStructuredTextMRHSAT
+{
+	idc = 1107;
+	show = false;
+	text = "Grid: 000111"; //--- ToDo: Localize;
+	x = 0.276875 * safezoneW + safezoneX;
+	y = 0.5 * safezoneH + safezoneY;
+	w = 0.137812 * safezoneW;
+	h = 0.028 * safezoneH;
+};
+
+//end1.4 add
 class MRHStaticsoverlay: RscPictureMRHSAT
 {
 	idc = 1333;

@@ -81,6 +81,20 @@ class MRH // Defines the "owner"
 		class ApplyFullScreenSettings
 		{};
 
+		class Compass
+		{};
+		class ElevationAndGrid
+		{};
+		class BluForMouseOver
+		{};
+		class TrackedObjIntel
+		{};
+		class RandomDisplayID
+		{};
+		class ResetUsedIDcs
+		{};
+
+
 
 	};	
 
