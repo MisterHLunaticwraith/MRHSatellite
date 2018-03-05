@@ -1,4 +1,4 @@
-_todestroy = player getVariable "MRH_SATCAM";
+_todestroy = uinameSpace getVariable "MRH_SATCAM";
 deleteVehicle _todestroy;
 camDestroy _todestroy;
 _todestroy2 = missionNamespace getVariable "MRH_SATCAMTARGET";

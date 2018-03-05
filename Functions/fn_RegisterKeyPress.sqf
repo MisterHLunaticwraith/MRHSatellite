@@ -11,7 +11,7 @@
 
 params ["_key"];
 
-_cam = player getVariable "MRH_SATCAM";
+_cam = uinameSpace getVariable "MRH_SATCAM";
 if (isNil "_cam") ExitWith {};
 _camtarget = missionNamespace getVariable "MRH_SATCAMTARGET";
 _both = [_cam,_camtarget];

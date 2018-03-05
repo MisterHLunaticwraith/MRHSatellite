@@ -41,7 +41,7 @@ publicVariable "MRHSatPos";
 _posX = _selectedPos select 0;
 _posY = _selectedPos select 1;
 
-_cam = player getVariable "MRH_SATCAM";
+_cam = uinameSpace getVariable "MRH_SATCAM";
 _cam setPos [_posX , _posY, (getPos _cam select 2)];
 [player] call MRH_fnc_GlobalCamMove;
 call MRH_fnc_FirstSatMove;

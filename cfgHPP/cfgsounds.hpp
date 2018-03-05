@@ -96,3 +96,12 @@ sound[]  = {"\MRHSatellite\Sounds\notarget.ogg", 5, 1, 100};
 titles[] = {};
 
 };
+
+class laseringstopped
+{
+
+name     = "laseringstopped";
+sound[]  = {"\MRHSatellite\Sounds\laseringstopped.ogg", 5, 1, 100};
+titles[] = {};
+
+};

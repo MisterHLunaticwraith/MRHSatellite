@@ -9,10 +9,10 @@ params ["_object"];
 waitUntil {(!isNull (findDisplay 46)) && alive player};
 //waitUntil {time>1};
 _object setObjectTexture [0, "\MRHSatellite\Paa\offline.paa"];
-waitUntil {!isNull (player getVariable "MRH_SATCAM")};//probably unnecessary
+waitUntil {!isNull (uinameSpace getVariable "MRH_SATCAM")};//probably unnecessary
 waitUntil {!(missionNamespace getVariable "MRHSatFirstInitCheck")};
 
-_camMRHSAT = player getVariable "MRH_SATCAM";
+_camMRHSAT = uinameSpace getVariable "MRH_SATCAM";
 _pip = missionNamespace getVariable "SelectedViewMode";
 //added in 1.3
 if (isNil "_pip") then {_pip =0};

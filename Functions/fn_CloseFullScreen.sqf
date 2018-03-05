@@ -11,7 +11,7 @@ sleep 1;
 //camDestroy _cam;
 player cameraEffect ['terminate','back'];
 ///added inv1.3
-_camMRHSAT = player getVariable "MRH_SATCAM";
+_camMRHSAT = uinameSpace getVariable "MRH_SATCAM";
 _pip = missionNamespace getVariable "SelectedViewMode";
 //added in 1.3
 if (isNil "_pip") then {_pip =0};

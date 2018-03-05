@@ -23,11 +23,12 @@ ctrlshow [1271, false];
 playSound "TrackingTarget";
 [_selectedTarget] spawn {
 _selectedTarget = _this select 0;
-_cam = player getVariable "MRH_SATCAM";
+_cam = uinameSpace getVariable "MRH_SATCAM";
 _tracking = true;
 while {_tracking} do {
 _cam setPos [getPos _selectedTarget select 0, getPos _selectedTarget select 1, getPos _cam select 2];
-sleep 0.5;
 [player] call MRH_fnc_GlobalCamMove;
+sleep 0.5;
+
 _tracking = missionNameSpace getVariable "MRH_Follow_tracking";};
 };

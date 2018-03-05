@@ -1,5 +1,5 @@
 [] spawn {
-_camMRHSAT = player getVariable "MRH_SATCAM";
+_camMRHSAT = uinameSpace getVariable "MRH_SATCAM";
 //_pos = getPos _cam;
 
 closedialog 0;

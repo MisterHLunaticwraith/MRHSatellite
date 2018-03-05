@@ -5,7 +5,7 @@ call MRH_fnc_GlobalPipRefresh;
 */
 [[],{
 if (ctrlShown ((findDisplay 9751) displayCtrl 1231)) ExitWith {};
-_camMRHSAT = player getVariable "MRH_SATCAM";
+_camMRHSAT = uinameSpace getVariable "MRH_SATCAM";
 _pip = missionNamespace getVariable "SelectedViewMode";
 //added in 1.3
 if (isNil "_pip") then {_pip =0};

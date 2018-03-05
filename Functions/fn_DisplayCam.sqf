@@ -1,5 +1,5 @@
 
-_camMRHSAT = player getVariable "MRH_SATCAM";
+_camMRHSAT = uinameSpace getVariable "MRH_SATCAM";
 _pip = missionNamespace getVariable "SelectedViewMode";
 
 _TypeText = ((findDisplay 9751) displayCtrl 1207);

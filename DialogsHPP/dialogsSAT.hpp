@@ -51,7 +51,7 @@ class MRHMarkings: RscPictureMRHSAT
 class MRHAltitudeName: RscStructuredTextMRHSAT
 {
 	idc = 1204;
-	show = false
+	show = false;
 	text = "Altitude";
 	x = 0.63125 * safezoneW + safezoneX;
 	y = 0.192 * safezoneH + safezoneY;
@@ -61,7 +61,7 @@ class MRHAltitudeName: RscStructuredTextMRHSAT
 class MRHAltitudeDisplay: RscStructuredTextMRHSAT
 {
 	idc = 1205;
-	show = false
+	show = false;
 	text = "AltDisplay";
 	x = 0.63125 * safezoneW + safezoneX;
 	y = 0.22 * safezoneH + safezoneY;
@@ -71,7 +71,7 @@ class MRHAltitudeDisplay: RscStructuredTextMRHSAT
 class MRHViewModeName: RscStructuredTextMRHSAT
 {
 	idc = 1206;
-	show = false
+	show = false;
 	text = "View Mode";
 	x = 0.63125 * safezoneW + safezoneX;
 	y = 0.248 * safezoneH + safezoneY;
@@ -81,7 +81,7 @@ class MRHViewModeName: RscStructuredTextMRHSAT
 class MRHViewModeDisplay: RscStructuredTextMRHSAT
 {
 	idc = 1207;
-	show = false
+	show = false;
 	text = "ViewDisplay";
 	x = 0.63125 * safezoneW + safezoneX;
 	y = 0.276 * safezoneH + safezoneY;
@@ -102,7 +102,7 @@ class MRHFullScreenButton: RscButtonMRHSAT
 class MRHSlider: RscSliderMRHSAT
 {
 	idc = 1202;
-	show = false
+	show = false;
 	 type = CT_SLIDER; 
 	 style = SL_VERT;
 	x = 0.716563 * safezoneW + safezoneX;
@@ -112,7 +112,7 @@ class MRHSlider: RscSliderMRHSAT
 	    color[] = { 1, 1, 1, 1 }; 
         coloractive[] = { 1, 0, 0, 0.5 };
 	//onLoad = "call MRH_fnc_SetSatRange;";
-	onSliderPosChanged = "((findDisplay 9751) displayCtrl 1205) ctrlSetStructuredText parsetext (str (round (_this select 1))); _cam = player getVariable ""SATCAM""; _cam setPos [(getpos _cam select 0), (getpos _cam select 1), (_this select 1)];call MRH_fnc_GlobalCamMove;";
+	onSliderPosChanged = "((findDisplay 9751) displayCtrl 1205) ctrlSetStructuredText parsetext (str (round (_this select 1))); _cam = uinameSpace getVariable ""MRH_SATCAM""; _cam setPos [(getpos _cam select 0), (getpos _cam select 1), (_this select 1)];[player] call MRH_fnc_GlobalCamMove;";
 };
 /*
 	};
