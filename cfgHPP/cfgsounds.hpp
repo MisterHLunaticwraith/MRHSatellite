@@ -74,7 +74,7 @@ class visionswitch
 {
 
 name     = "visionswitch";
-sound[]  = {"\MRHSatellite\Sounds\visionswitch.ogg", 5, 1, 100};
+sound[]  = {"\MRHSatellite\Sounds\visionswitch.ogg", 1, 1, 100};
 titles[] = {};
 
 };
