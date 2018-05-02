@@ -454,15 +454,19 @@
 				<Original>Set satellite height range.</Original>
 				<English>Set satellite height range.</English>
 				<French>Régler l'amplitude d'altitude du satellite.</French>
+
 				<Spanish>Ajustar altitud del satélite.</Spanish>
 				<German>Satellitenhöhenbereich festlegen</German>
+
 			</Key>
 			<Key ID="STR_MRH_SETTINGSSETRANGETOOLTIP">
 				<Original>With this setting you can set the satellite's max height(default is 300m)</Original>
 				<English>With this setting you can set the satellite's max height(default is 300m)</English>
 				<French>Ce réglage permet de fixer l'altitude maximum du satellite (par défaut 300m)</French>
+
 				<Spanish>Con ésta opción permite cambiar la altitud máxima del satélite (por defecto 300m)</Spanish>
 				<German>Mit dieser Einstellung können Sie die maximale Höhe des Satelliten einstellen (Standard ist 300m)</German>
+
 			</Key>
 
 			

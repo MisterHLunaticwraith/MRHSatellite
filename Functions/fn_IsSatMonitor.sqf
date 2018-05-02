@@ -3,6 +3,7 @@ params ["_object"];
 [_object] spawn {
 params ["_object"];
 
+
 //waituntil mission is initialized
 
 
@@ -13,6 +14,7 @@ waitUntil {!isNull (uinameSpace getVariable "MRH_SATCAM")};//probably unnecessar
 waitUntil {!(missionNamespace getVariable "MRHSatFirstInitCheck")};
 
 _camMRHSAT = uinameSpace getVariable "MRH_SATCAM";
+
 _pip = missionNamespace getVariable "SelectedViewMode";
 //added in 1.3
 if (isNil "_pip") then {_pip =0};

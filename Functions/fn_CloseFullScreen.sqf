@@ -11,7 +11,9 @@ sleep 1;
 //camDestroy _cam;
 player cameraEffect ['terminate','back'];
 ///added inv1.3
+
 _camMRHSAT = uinameSpace getVariable "MRH_SATCAM";
+
 _pip = missionNamespace getVariable "SelectedViewMode";
 //added in 1.3
 if (isNil "_pip") then {_pip =0};
@@ -20,6 +22,8 @@ _camMRHSAT cameraEffect ["internal","back","rttMRHSatelliteFeed"];
 _camMRHSAT camCommit 0;
 "rttMRHSatelliteFeed" setPiPEffect [_pip];
 //end added
+
 call MRH_fnc_SatInit;
 call MRH_fnc_GlobalPipRefresh;
 };
+

@@ -43,6 +43,7 @@ _ctrlCOMBO lbadd localize "STR_MRH_FLIRBHOT";
 lbSetData [2100, 2, 2]; 
 call MRH_fnc_Compass;
 call MRH_fnc_ElevationAndGrid;
+
 call MRH_fnc_GlobalPipRefresh;
 _isTracking = missionNameSpace getVariable "MRH_Follow_tracking";
 if (isNil "_isTracking")then {_isTracking = false;};
@@ -54,5 +55,6 @@ missionNameSpace getVariable "MRH_CurrentlyTrackedTarget";
 _isLasering = missionNameSpace getVariable "SatLaserOn";
 if (isNil "_isLasering") then {_isLasering = false};
 if (_isLasering) then {ctrlshow [1270, true];}
+
 
 };
