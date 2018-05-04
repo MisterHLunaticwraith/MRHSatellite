@@ -4,6 +4,7 @@ eg.
 call MRH_fnc_GlobalPipRefresh;
 */
 [[],{
+if (!isNull curatorCamera) ExitWith {};
 if (ctrlShown ((findDisplay 9751) displayCtrl 1231)) ExitWith {};
 _camMRHSAT = uinameSpace getVariable "MRH_SATCAM";
 _pip = missionNamespace getVariable "SelectedViewMode";

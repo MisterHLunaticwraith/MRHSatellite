@@ -1,5 +1,6 @@
 params ["_caller"];
 //if (_caller == player) ExitWith {};
+if (!isNull curatorCamera) ExitWith {};
 _cam = uinameSpace getVariable "MRH_SATCAM";
 _sentCoordinates = getPos _cam;
 

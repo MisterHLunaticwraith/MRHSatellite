@@ -29,6 +29,7 @@ class cfgVehicles
 {
 #include"\MRHSatellite\cfgHPP\cfgvehicles.hpp"
 #include"\MRHSatellite\cfgHPP\cfgmodules.hpp"
+#include "\MRHSatellite\Models\Antenna\antenna.hpp"
 };
 
 class CfgFactionClasses
@@ -39,7 +40,11 @@ class CfgFactionClasses
 		displayName = $STR_MRH_CFG_SATSETTINGS;
 	};
 };
-#include"\MRHSatellite\cfgHPP\cfgweapons.hpp"
+class CfgWeapons
+{
+	#include"\MRHSatellite\cfgHPP\cfgweapons.hpp"
+	#include "\MRHSatellite\Models\Tablet\tablet.hpp"
+};
 class CfgSounds
 {
 	#include "\MRHSatellite\cfgHPP\cfgsounds.hpp"
@@ -75,4 +80,21 @@ class Extended_PreInit_EventHandlers
 		
 		
 	};
+};
+
+class CfgEditorCategories
+{
+	class EdCat_MRH_Sat // Category class, you point to it in editorCategory property
+	{
+		displayName = "MRH Satellite"; // Name visible in the list
+	};
+};
+
+class CfgEditorSubcategories
+{
+	class EdSubcat_MRH_Objects // Category class, you point to it in editorSubcategory property
+	{
+		displayName = "Objects"; // Name visible in the list
+	};
+
 };
