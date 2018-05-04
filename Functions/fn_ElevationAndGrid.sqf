@@ -1,6 +1,8 @@
 [] spawn {
 disableSerialization;
+
 _camera = uinameSpace getVariable "MRH_SATCAM";
+
 
 waitUntil {ctrlshown ((findDisplay 9751)displayCtrl 1106)};
 
