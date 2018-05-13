@@ -5,7 +5,7 @@
 class MRH_TacticalDisplay: CBA_MiscItem
 {
 	author = "Mr H.";
-	displayName = "Universal Tactical Display";
+	displayName = $STR_MRH_CFGTABLETUTDOBJDISPLAYNAME;
 	model = "\MRHSatellite\Models\Tablet\tablet.p3d";
 	scope = 2;      
 	scopeArsenal = 2;
@@ -15,7 +15,7 @@ class MRH_TacticalDisplay: CBA_MiscItem
 	editorPreview = "\A3\EditorPreviews_F\Data\CfgVehicles\Default\Prop.jpg";
 	editorSubcategory = "EdSubcat_InventoryItems";
 	picture = "\MRHSatellite\Models\Tablet\tableticon.paa";
-	descriptionShort = "Universal Tactical Display used to connect to the satellite network.";
+	descriptionShort = $STR_MRH_CFGTABLETDESCRIPTIONSHORT;
 	//type = 0;
 	ace_arsenal_hide = 0;
 	class ItemInfo: CBA_MiscItem_ItemInfo

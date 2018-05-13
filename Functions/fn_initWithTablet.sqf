@@ -29,7 +29,7 @@ while {alive _linkedAntenna && _linkedAntenna == player getVariable ['MRH_Antenn
 			{
 			case (_dist > 100):{
 			_signalIcon ctrlsetText "\MRHSatellite\Paa\Signal\signallost.paa"; 
-			hint "Signal perdu, antenne déconnectée"; 
+			hint localize "STR_MRH_SIGNALLOST"; 
 			player setVariable ["MRH_DistanceToAntennaScriptRunning",false];
 			player setVariable ['MRH_AntennaLinkedToTablet',objNull];
 			playsound "MRH_SAT_AntennaSignalLost";

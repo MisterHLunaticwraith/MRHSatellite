@@ -97,7 +97,7 @@ class CfgEditorSubcategories
 {
 	class EdSubcat_MRH_Objects // Category class, you point to it in editorSubcategory property
 	{
-		displayName = "Objects"; // Name visible in the list
+		displayName = $STR_MRH_EDSUBCATOBJECTS; // Name visible in the list
 	};
 
 };

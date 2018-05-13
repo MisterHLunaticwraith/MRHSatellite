@@ -474,6 +474,114 @@
 			
 			
 		</Container>
+		
+		<Container name="UTDUPDATE">
+			<Key ID="STR_MRH_EDSUBCATOBJECTS">
+				<Original>Objects</Original>
+				<English>Objects</English>
+				<French>Objets</French>
+
+			</Key>
+			<Key ID="STR_MRH_UNFOLD_ANTENNA">
+				<Original>Unfold SATCOM antenna</Original>
+				<English>Unfold SATCOM antenna</English>
+				<French>Déplier l'antenne Satellite</French>
+
+			</Key>
+			<Key ID="STR_MRH_USEUTD">
+				<Original>Use UTD</Original>
+				<English>Use UTD</English>
+				<French>Utiliser la tablette tactique</French>
+
+			</Key>
+			<Key ID="STR_MRH_UNFOLDANTENNAVANILLA">
+				<Original>&lt;img image='\MRHSatellite\Models\Antenna\antennaInvIcon.paa' size='1' shadow='false' /&gt;&lt;t color ='#4286f4'&gt;&lt;t font = 'PuristaLight'&gt;Unfold SATCOM antenna&lt;/t&gt;</Original>
+				<English>&lt;img image='\MRHSatellite\Models\Antenna\antennaInvIcon.paa' size='1' shadow='false' /&gt;&lt;t color ='#4286f4'&gt;&lt;t font = 'PuristaLight'&gt;Unfold SATCOM antenna&lt;/t&gt;</English>
+				<French>&lt;img image='\MRHSatellite\Models\Antenna\antennaInvIcon.paa' size='1' shadow='false' /&gt;&lt;t color ='#4286f4'&gt;&lt;t font = 'PuristaLight'&gt;Déplier l'antenne Satellite&lt;/t&gt;</French>
+
+			</Key>
+			<Key ID="STR_MRH_SIGNALLOST">
+				<Original>Signal lost, antenna uplink severed</Original>
+				<English>Signal lost, antenna uplink severed</English>
+				<French>Signal perdu, antenne déconnectée</French>
+
+			</Key>
+			<Key ID="STR_MRH_OPENUTDKEYBIND">
+				<Original>Open UTD</Original>
+				<English>Open UTD</English>
+				<French>Ouvrir la tablette tactique</French>
+
+			</Key>
+			<Key ID="STR_MRH_OPENUTDKEYBINDTOOLTIP">
+				<Original>Opens the UTD, requires to have UTD in inventory</Original>
+				<English>Opens the UTD, requires to have UTD in inventory</English>
+				<French>Ouvre la tablette tactique, nécessite d'avoir l'objet dans l'inventaire</French>
+
+			</Key>
+			<Key ID="STR_MRH_CFGANTENNADISPLAYNAME">
+				<Original>Trivec Avant SATCOM Antenna</Original>
+				<English>Trivec Avant SATCOM Antenna</English>
+				<French>Antenne satellite Trivec Avant</French>
+
+			</Key>
+			<Key ID="STR_MRH_CFGACEINTERACT">
+				<Original>Interact</Original>
+				<English>Interact</English>
+				<French>Interagir</French>
+
+			</Key>
+			<Key ID="STR_MRH_CFGACECONNECTTOUTD">
+				<Original>Connect antenna to UTD</Original>
+				<English>Connect antenna to UTD</English>
+				<French>Connecter l'antenne à la tablette tactique</French>
+
+			</Key>
+			<Key ID="STR_MRH_CFGACEFOLDANTENNA">
+				<Original>Fold antenna</Original>
+				<English>Fold antenna</English>
+				<French>Replier l'antenne</French>
+
+			</Key>
+			<Key ID="STR_MRH_CFGVANILLACONNECTTOUTD">
+				<Original>&lt;img image='\MRHSatellite\Paa\iconconnect.paa' size='1' shadow='false' /&gt;&lt;t color ='#19ea2b'&gt;&lt;t font = 'PuristaLight'&gt;Connect antenna to UTD&lt;/t&gt;</Original>
+				<English>&lt;img image='\MRHSatellite\Paa\iconconnect.paa' size='1' shadow='false' /&gt;&lt;t color ='#19ea2b'&gt;&lt;t font = 'PuristaLight'&gt;Connect antenna to UTD&lt;/t&gt;</English>
+				<French>&lt;img image='\MRHSatellite\Paa\iconconnect.paa' size='1' shadow='false' /&gt;&lt;t color ='#19ea2b'&gt;&lt;t font = 'PuristaLight'&gt;Connecter l'antenne à la tablette tactique&lt;/t&gt;</French>
+
+			</Key>
+			<Key ID="STR_MRH_CFGVANILLAFOLDANTENNA">
+				<Original>&lt;img image='\MRHSatellite\Models\Antenna\antennaInvIcon.paa' size='1' shadow='false' /&gt;&lt;t color ='#ea2b19'&gt;&lt;t font = 'PuristaLight'&gt;Fold Antenna&lt;/t&gt;</Original>
+				<English>&lt;img image='\MRHSatellite\Models\Antenna\antennaInvIcon.paa' size='1' shadow='false' /&gt;&lt;t color ='#ea2b19'&gt;&lt;t font = 'PuristaLight'&gt;Fold Antenna&lt;/t&gt;</English>
+				<French>&lt;img image='\MRHSatellite\Models\Antenna\antennaInvIcon.paa' size='1' shadow='false' /&gt;&lt;t color ='#ea2b19'&gt;&lt;t font = 'PuristaLight'&gt;Replier l'antenne&lt;/t&gt;</French>
+
+			</Key>
+			<Key ID="STR_MRH_CFGANTENNAINVITEMDISPLAYNAME">
+				<Original>Trivec Avant SATCOM Antenna (Folded)</Original>
+				<English>Trivec Avant SATCOM Antenna (Folded)</English>
+				<French>Antenne satellite Trivec Avant (Repliée)</French>
+
+			</Key>
+			<Key ID="STR_MRH_CFGANTENNAINVITEMDESCRIPTION">
+				<Original>SATCOM Antenna, used to get satellite signal</Original>
+				<English>SATCOM Antenna, used to get satellite signal</English>
+				<French>Antenne satellite, utilisée pour recevoir le signal satellite</French>
+
+			</Key>
+			<Key ID="STR_MRH_CFGTABLETUTDOBJDISPLAYNAME">
+				<Original>Universal Tactical Display</Original>
+				<English>Universal Tactical Display</English>
+				<French>Universal Tactical Display (tablette tactique)</French>
+
+			</Key>
+			<Key ID="STR_MRH_CFGTABLETDESCRIPTIONSHORT">
+				<Original>Universal Tactical Display used to connect to the satellite network.</Original>
+				<English>Universal Tactical Display used to connect to the satellite network.</English>
+				<French>Tablette tactique utilisée pour se connecter au réseau satellite.</French>
+			</Key>
+
+
+
+
+		</Container>
 
 
 	</Package>

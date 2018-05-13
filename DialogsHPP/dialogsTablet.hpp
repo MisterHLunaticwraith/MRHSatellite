@@ -355,8 +355,8 @@ class MRHElevationDisplay: RscStructuredTextMRHSAT
 	text = "Terrain elevation: 1200m"; //--- ToDo: Localize;
 	x = 0.362187 * safezoneW + safezoneX;
 	y = 0.346 * safezoneH + safezoneY;
-	w = 0.091875 * safezoneW;
-	h = 0.028 * safezoneH;
+	w = 0.11 * safezoneW;//w = 0.091875 * safezoneW;
+	h = 0.03 * safezoneH;//h = 0.028 * safezoneH;
 };
 class MRHGridCoordDisplay: RscStructuredTextMRHSAT
 {

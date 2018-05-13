@@ -14,7 +14,7 @@ class MRH_SatCom_Antenna: Items_base_F {
 	//_generalMacro = "Land_BottlePlastic_V2_F";
 	scope = 2;
 	scopeCurator = 2;
-	displayName = "Trivec Avant SATCOM Antenna";
+	displayName = $STR_MRH_CFGANTENNADISPLAYNAME;
 	model = "\MRHSatellite\Models\Antenna\antennaMERGE.p3d";
 	
 	icon = "iconObject_circle";
@@ -41,12 +41,12 @@ class MRH_SatCom_Antenna: Items_base_F {
 	class ACE_Actions {
 		class ACE_AntennaOptions 
 		{
-			displayName = "Interact";
+			displayName = $STR_MRH_CFGACEINTERACT;
 			icon = "\MRHSatellite\Paa\iconantenna.paa";
 			distance = 2;
 			selection = "mem01";
 				class Connect {
-					displayName = "Connect antenna to UTD";
+					displayName = $STR_MRH_CFGACECONNECTTOUTD;
 					condition = "('MRH_TacticalDisplay' in items player) && ((player getVariable ['MRH_AntennaLinkedToTablet',objNull]) != _target)";
 					exceptions[] = {};
 					statement = "player setVariable ['MRH_AntennaLinkedToTablet',_target];_target say3d 'MRH_SAT_AntennaLinked';";
@@ -56,7 +56,7 @@ class MRH_SatCom_Antenna: Items_base_F {
 				};
 				
 				class Fold {
-					displayName = "Fold antenna";
+					displayName = $STR_MRH_CFGACEFOLDANTENNA;
 					condition = "true";
 					exceptions[] = {};
 					statement = "_storePos = getPosATL _target; deleteVehicle _target; [_storePos] call MRH_fnc_foldAntenna;";
@@ -71,8 +71,8 @@ class MRH_SatCom_Antenna: Items_base_F {
 	{
 		class Connect
 		{
-			displayName="<img image='\MRHSatellite\Paa\iconconnect.paa' size='1' shadow='false' /><t color ='#19ea2b'><t font = 'PuristaLight'>Connect antenna to UTD</t>";
-			displayNameDefault = "<img image='\MRHSatellite\Paa\iconconnect.paa' size='1' shadow='false' /><t color ='#19ea2b'><t font = 'PuristaLight'>Connect antenna to UTD</t>";
+			displayName= $STR_MRH_CFGVANILLACONNECTTOUTD;
+			displayNameDefault = $STR_MRH_CFGVANILLACONNECTTOUTD;
             showWindow = 1;
 	        hideOnUse = 0;
 			priority = 0;
@@ -85,8 +85,8 @@ class MRH_SatCom_Antenna: Items_base_F {
 		};
 				class Fold
 		{
-			displayName="<img image='\MRHSatellite\Models\Antenna\antennaInvIcon.paa' size='1' shadow='false' /><t color ='#ea2b19'><t font = 'PuristaLight'>Fold Antenna</t>";
-			displayNameDefault = "<img image='\MRHSatellite\Models\Antenna\antennaInvIcon.paa' size='1' shadow='false' /><t color ='#ea2b19'><t font = 'PuristaLight'>Fold Antenna</t>";
+			displayName= $STR_MRH_CFGVANILLAFOLDANTENNA;
+			displayNameDefault = $STR_MRH_CFGVANILLAFOLDANTENNA;
             showWindow = 1;
 	        hideOnUse = 0;
 			priority = 0;
@@ -94,7 +94,7 @@ class MRH_SatCom_Antenna: Items_base_F {
 			position= "mem01";
 			radius= 1;
             onlyForPlayer = 1;
-			condition= "true";
+			condition= "!('ace_common' in activatedAddons)";
 			statement= "_storePos = getPosATL this; deleteVehicle this; [_storePos] call MRH_fnc_foldAntenna;";
 		};
 	};	
