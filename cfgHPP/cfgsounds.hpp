@@ -105,3 +105,30 @@ sound[]  = {"\MRHSatellite\Sounds\laseringstopped.ogg", 5, 1, 100};
 titles[] = {};
 
 };
+
+class MRH_SAT_AntennaLinked
+{
+
+name     = "MRH_SAT_AntennaLinked";
+sound[]  = {"\MRHSatellite\Sounds\MRH_SAT_AntennaLinked.ogg", 5, 1, 100};
+titles[] = {};
+
+};
+
+class MRH_SAT_AntennaNotConnected
+{
+
+name     = "MRH_SAT_AntennaNotConnected";
+sound[]  = {"\MRHSatellite\Sounds\MRH_SAT_AntennaNotConnected.ogg", 5, 1, 100};
+titles[] = {};
+
+};
+
+class MRH_SAT_AntennaSignalLost
+{
+
+name     = "MRH_SAT_AntennaSignalLost";
+sound[]  = {"\MRHSatellite\Sounds\MRH_SAT_AntennaSignalLost.ogg", 5, 1, 100};
+titles[] = {};
+
+};

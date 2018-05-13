@@ -12,7 +12,7 @@ if !(HASACE3) then {[
 [_laptop],{
 params ["_laptop"];
 [_laptop] call MRH_fnc_isSatMonitor;
-_laptop addAction [localize "STR_MRH_ADDACTIONUSE",{call MRH_fnc_SatInit;}];
+_laptop addAction [localize "STR_MRH_ADDACTIONUSE",{[] call MRH_fnc_SatInit;}];
 _laptop addAction [localize "STR_MRH_ADDACTIONREPACK",{
  _laptop = _this select 0;
  _sat = _laptop getVariable "LinkedAntenna";
@@ -38,7 +38,7 @@ _1 = localize "STR_MRH_ADDACTIONUSE";
 _action =["Utiliser", 
 _1,
 "\MRHSatellite\paa\satellite.paa", 
- { call MRH_fnc_SatInit;}, 
+ {[] call MRH_fnc_SatInit;}, 
  {true},
  {},
  [],

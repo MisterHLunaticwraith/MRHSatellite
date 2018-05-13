@@ -26,3 +26,4 @@ _16 = localize "STR_MRH_TOOLTIP_ZOOMOUT";
 ["MRHSatellite", "MRHSatKeyRotateRiht",[_6, _14],{5 call MRH_fnc_RegisterKeyPress},{},[DIK_E, [false, false, false]]] call CBA_fnc_addKeybind;
 ["MRHSatellite", "MRHZoomIn",[_7, _15],{6 call MRH_fnc_RegisterKeyPress},{},[DIK_ADD, [false, false, false]]] call CBA_fnc_addKeybind;
 ["MRHSatellite", "MRHZoomOut",[_8, _16],{7 call MRH_fnc_RegisterKeyPress},{},[DIK_NUMPADMINUS, [false, false, false]]] call CBA_fnc_addKeybind;
+["MRHSatellite", "MRHOpenUTD",["Open Universal Tactical Display", "Opens the UTD, requires to have UTD in inventory"],{if ("MRH_TacticalDisplay" in items player) then {[true] call MRH_fnc_SatInit}},{},[DIK_U, [false, true, false]]] call CBA_fnc_addKeybind;

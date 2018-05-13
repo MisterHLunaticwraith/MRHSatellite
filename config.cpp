@@ -6,7 +6,7 @@ class CfgPatches {
 		
 		
 		}; //
-		weapons[] = {"MRH_BluForTransponder"}; //
+		weapons[] = {"MRH_BluForTransponder","MRH_TacticalDisplay"}; //
 		requiredVersion = 0.1; //
 		requiredAddons[] = {"cba_settings","A3_Weapons_F_Ammoboxes"}; //
 	};
@@ -44,6 +44,7 @@ class CfgWeapons
 {
 	#include"\MRHSatellite\cfgHPP\cfgweapons.hpp"
 	#include "\MRHSatellite\Models\Tablet\tablet.hpp"
+	#include "\MRHSatellite\Models\Antenna\antennaInventoryItem.hpp"
 };
 class CfgSounds
 {
@@ -53,12 +54,14 @@ class CfgFunctions
 {
 	#include "\MRHSatellite\cfgHPP\cfgfunctions.hpp"
 };
+
 ////=============fincfgs
 
 ////=============Dialogs
 #include "\MRHSatellite\DialogsHPP\definesSAT.hpp"
 #include "\MRHSatellite\DialogsHPP\dialogsSAT.hpp"
 #include "\MRHSatellite\DialogsHPP\dialogsSATFULLSCREEN.hpp"
+#include "\MRHSatellite\DialogsHPP\dialogsTablet.hpp"
 class Extended_PostInit_EventHandlers
 {
    class MRHSatInit

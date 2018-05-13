@@ -98,6 +98,10 @@ class MRH // Defines the "owner"
 		{};
 		class TrackingTarget
 		{};
+		class initWithTablet
+		{};
+		class foldAntenna
+		{};
 
 
 

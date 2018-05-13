@@ -1,12 +1,12 @@
-class CBA_MiscItem;
-class CBA_MiscItem_ItemInfo;
+//class CBA_MiscItem;
+//class CBA_MiscItem_ItemInfo;
 //class InventoryItem_Base_F;
     
-class MRH_BluForTransponder: CBA_MiscItem
+class MRH_TacticalDisplay: CBA_MiscItem
 {
 	author = "Mr H.";
 	displayName = "Universal Tactical Display";
-	model = "MRHSatellite\Models\Tablet\tablet.p3d";
+	model = "\MRHSatellite\Models\Tablet\tablet.p3d";
 	scope = 2;      
 	scopeArsenal = 2;
 	scopeCurator = 2;
@@ -14,13 +14,14 @@ class MRH_BluForTransponder: CBA_MiscItem
 	editorCategory = "EdCat_Equipment";
 	editorPreview = "\A3\EditorPreviews_F\Data\CfgVehicles\Default\Prop.jpg";
 	editorSubcategory = "EdSubcat_InventoryItems";
-	picture = "\MRHSatellite\paa\transponder.paa";
-	descriptionShort = "Transponder";
+	picture = "\MRHSatellite\Models\Tablet\tableticon.paa";
+	descriptionShort = "Universal Tactical Display used to connect to the satellite network.";
 	//type = 0;
 	ace_arsenal_hide = 0;
 	class ItemInfo: CBA_MiscItem_ItemInfo
 			{
-				mass=10;
+				mass=6.6;//en lb*10
 			};
+
 };
 
