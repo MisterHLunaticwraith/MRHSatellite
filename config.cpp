@@ -6,7 +6,7 @@ class CfgPatches {
 		
 		
 		}; //
-		weapons[] = {"MRH_BluForTransponder"}; //
+		weapons[] = {"MRH_BluForTransponder","MRH_TacticalDisplay"}; //
 		requiredVersion = 0.1; //
 		requiredAddons[] = {"cba_settings","A3_Weapons_F_Ammoboxes"}; //
 	};
@@ -29,6 +29,7 @@ class cfgVehicles
 {
 #include"\MRHSatellite\cfgHPP\cfgvehicles.hpp"
 #include"\MRHSatellite\cfgHPP\cfgmodules.hpp"
+#include "\MRHSatellite\Models\Antenna\antenna.hpp"
 };
 
 class CfgFactionClasses
@@ -39,7 +40,12 @@ class CfgFactionClasses
 		displayName = $STR_MRH_CFG_SATSETTINGS;
 	};
 };
-#include"\MRHSatellite\cfgHPP\cfgweapons.hpp"
+class CfgWeapons
+{
+	#include"\MRHSatellite\cfgHPP\cfgweapons.hpp"
+	#include "\MRHSatellite\Models\Tablet\tablet.hpp"
+	#include "\MRHSatellite\Models\Antenna\antennaInventoryItem.hpp"
+};
 class CfgSounds
 {
 	#include "\MRHSatellite\cfgHPP\cfgsounds.hpp"
@@ -48,12 +54,14 @@ class CfgFunctions
 {
 	#include "\MRHSatellite\cfgHPP\cfgfunctions.hpp"
 };
+
 ////=============fincfgs
 
 ////=============Dialogs
 #include "\MRHSatellite\DialogsHPP\definesSAT.hpp"
 #include "\MRHSatellite\DialogsHPP\dialogsSAT.hpp"
 #include "\MRHSatellite\DialogsHPP\dialogsSATFULLSCREEN.hpp"
+#include "\MRHSatellite\DialogsHPP\dialogsTablet.hpp"
 class Extended_PostInit_EventHandlers
 {
    class MRHSatInit
@@ -75,4 +83,21 @@ class Extended_PreInit_EventHandlers
 		
 		
 	};
+};
+
+class CfgEditorCategories
+{
+	class EdCat_MRH_Sat // Category class, you point to it in editorCategory property
+	{
+		displayName = "MRH Satellite"; // Name visible in the list
+	};
+};
+
+class CfgEditorSubcategories
+{
+	class EdSubcat_MRH_Objects // Category class, you point to it in editorSubcategory property
+	{
+		displayName = $STR_MRH_EDSUBCATOBJECTS; // Name visible in the list
+	};
+
 };

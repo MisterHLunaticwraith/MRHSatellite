@@ -94,6 +94,16 @@ class MRH // Defines the "owner"
 		class ResetUsedIDcs
 		{};
 
+		class GlobalPipRefresh
+		{};
+		class TrackingTarget
+		{};
+		class initWithTablet
+		{};
+		class foldAntenna
+		{};
+
+
 
 
 	};	

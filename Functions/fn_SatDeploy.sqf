@@ -2,6 +2,8 @@
 
 params ["_sourceBag"];
 player setVariable ["SourceBag", _sourceBag];
+_SourceBagPos = getPos _sourceBag;
+player setVariable ["SourceBagPos", _SourceBagPos];
 _1 = localize "STR_MRH_DEPLOYING";
 if !(HASACE3) then { [] spawn {
 _1 = localize "STR_MRH_DEPLOYING";

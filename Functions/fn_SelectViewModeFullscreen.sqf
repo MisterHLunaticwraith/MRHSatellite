@@ -1,5 +1,5 @@
 params ["_selected"];
-_cam = player getVariable "SATCAM";
+_cam = uinameSpace getVariable "MRH_SATCAM";
 _viewMode = 0;
 disableSerialization;
 _TypeText = ((findDisplay 9751) displayCtrl 1207);
