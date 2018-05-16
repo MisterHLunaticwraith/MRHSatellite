@@ -11,8 +11,8 @@ ctrlshow [1209,true];
 
 ctrlshow [1215,true];
 ctrlshow [1105,true];
-_showFullscreen = ["MRH_SAT_allowFullscreen"] call cba_settings_fnc_get;
-ctrlshow [1209, _showFullscreen];
+//_showFullscreen = ["MRH_SAT_allowFullscreen"] call cba_settings_fnc_get;
+//ctrlshow [1209, _showFullscreen];
 ctrlshow [1106,true];
 ctrlshow [1107,true];
 call MRH_fnc_Compass;
@@ -20,6 +20,8 @@ call MRH_fnc_ElevationAndGrid;
 
 
 _showFullscreen = ["MRH_SAT_allowFullscreen"] call cba_settings_fnc_get;
+_isUsingTablet = player getVariable ["MRHInterfaceIsCalledFromTablet",false];
+if (_isUsingTablet) then {_showFullscreen = false;};
 ctrlshow [1209, _showFullscreen];
 
 };

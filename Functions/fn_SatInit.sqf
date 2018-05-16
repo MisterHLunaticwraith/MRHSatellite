@@ -1,6 +1,14 @@
+_isCalledFromTablet = _this select 0;
+if (isNil "_isCalledFromTablet") then {_isCalledFromTablet = false;};
+//_handle = createdialog "MRHSatellite";
+	if (_isCalledFromTablet) then {
+	_handle = createdialog "MRHSatelliteUTD";
+	player setVariable ["MRHInterfaceIsCalledFromTablet",true];
+	call MRH_fnc_initWithTablet;
+	} 
+else {_handle = createdialog "MRHSatellite";};
 
-_handle = createdialog "MRHSatellite";
-call MRH_fnc_SetSatRange;
+	call MRH_fnc_SetSatRange;
 disableSerialization;
 _ctrlCOMBO = ((findDisplay 9751) displayCtrl 2100);
 _ctrlCOMBO lbadd "Normal";

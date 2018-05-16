@@ -1,5 +1,5 @@
 [] spawn {
-_camMRHSAT = player getVariable "SATCAM";
+_camMRHSAT = uinameSpace getVariable "MRH_SATCAM";
 //_pos = getPos _cam;
 
 closedialog 0;
@@ -17,9 +17,9 @@ _camMRHSAT cameraEffect ["internal", "BACK"];//editedin v1.3 if notworking rever
 //_camMRHSAT cameraEffect ["internal", "BACK","rttMRHSatelliteFeed"];//editedin v1.3 if notworking reverse
 _camMRHSAT camSetFov 1;
 _camMRHSAT camCommit 0;
-//missionNamespace setVariable ["SATCAM", camMRHSAT];
-//publicVariable "SATCAM";
-//missionNamespace setVariable ["SATCAMTARGET", _camtarget];
+//missionNamespace setVariable ["MRH_SATCAM", camMRHSAT];
+//publicVariable "MRH_SATCAM";
+//missionNamespace setVariable ["MRH_SATCAMTARGET", _camtarget];
 showCinemaBorder false;
 /////////
 _legacy = missionNamespace getVariable "SelectedViewMode";
@@ -43,4 +43,18 @@ _ctrlCOMBO lbadd localize "STR_MRH_FLIRBHOT";
 lbSetData [2100, 2, 2]; 
 call MRH_fnc_Compass;
 call MRH_fnc_ElevationAndGrid;
+
+call MRH_fnc_GlobalPipRefresh;
+_isTracking = missionNameSpace getVariable "MRH_Follow_tracking";
+if (isNil "_isTracking")then {_isTracking = false;};
+if (_isTracking) then {
+_currentlyTrackedTarget = 
+missionNameSpace getVariable "MRH_CurrentlyTrackedTarget";
+[_currentlyTrackedTarget] call MRH_fnc_TrackingTarget;
+};
+_isLasering = missionNameSpace getVariable "SatLaserOn";
+if (isNil "_isLasering") then {_isLasering = false};
+if (_isLasering) then {ctrlshow [1270, true];}
+
+
 };

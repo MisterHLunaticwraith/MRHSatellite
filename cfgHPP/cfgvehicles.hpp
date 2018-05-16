@@ -34,3 +34,44 @@ class B_Carryall_Base;
 				};
 			};
 	};
+
+	class Man;
+    class CAManBase: Man {
+        class ACE_SelfActions 
+		{
+			class ACE_Equipment {
+				class MRH_Ace_SATCOM_ANTENNA {
+					displayName = $STR_MRH_UNFOLD_ANTENNA;
+					condition = "'MRH_FoldedSatcomAntenna' in items player";
+					exceptions[] = {};
+					statement = "player removeItem 'MRH_FoldedSatcomAntenna';_antenna = 'MRH_SatCom_Antenna' createVehicle (player modelToWorld [0,1,0]); _antenna setPosATL (player modelToWorld [0,1,0]);";
+					icon = "\MRHSatellite\Models\Antenna\antennaInvIcon.paa";
+					};
+				class MRH_Ace_USE_UTD {
+					displayName = $STR_MRH_USEUTD;
+					condition = "'MRH_TacticalDisplay' in items player";
+					exceptions[] = {};
+					statement = "[true] call MRH_fnc_SatInit";
+					icon = "\MRHSatellite\Models\Tablet\tableticon.paa";
+					};
+			};
+
+		};
+		class UserActions
+			{
+				class MRH_Vanilla_SATCOM_ANTENNA
+				{
+				 displayName = $STR_MRH_UNFOLDANTENNAVANILLA;
+				 priority = 1;
+				 shortcut = "";
+				 condition = "('MRH_FoldedSatcomAntenna' in items player) && !('ace_common' in activatedAddons)";
+				 statement = "player removeItem 'MRH_FoldedSatcomAntenna';_antenna = 'MRH_SatCom_Antenna' createVehicle (player modelToWorld [0,1,0]); _antenna setPosATL (player modelToWorld [0,1,0]);";
+				 displayNameDefault = $STR_MRH_UNFOLDANTENNAVANILLA;
+				 position = "camo"; // pilotcontrol
+				 radius = 2;
+				 onlyforplayer = 1;
+				 showWindow = 1;
+				};
+		};
+		
+	};

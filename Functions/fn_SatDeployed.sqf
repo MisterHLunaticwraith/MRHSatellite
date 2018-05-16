@@ -1,6 +1,7 @@
 #include "MRH_components.hpp"
 _bag = player getVariable "SourceBag";
-_laptop = "Land_Laptop_device_F" createVehicle (_bag modelToWorld [0,1,0]);
+_pos = player getVariable "SourceBagPos";
+_laptop = "Land_Laptop_device_F" createVehicle (player modelToWorld [0,1,0]);
 _laptop setDir ((getDir _laptop)-180);
 _sat = "Land_SatelliteAntenna_01_F" createVehicle (_laptop modelToWorld [2, -0.5, 0.8]);
 _sat setDir ((getDir _laptop)-360 + 180);
@@ -11,7 +12,7 @@ if !(HASACE3) then {[
 [_laptop],{
 params ["_laptop"];
 [_laptop] call MRH_fnc_isSatMonitor;
-_laptop addAction [localize "STR_MRH_ADDACTIONUSE",{call MRH_fnc_SatInit;}];
+_laptop addAction [localize "STR_MRH_ADDACTIONUSE",{[] call MRH_fnc_SatInit;}];
 _laptop addAction [localize "STR_MRH_ADDACTIONREPACK",{
  _laptop = _this select 0;
  _sat = _laptop getVariable "LinkedAntenna";
@@ -20,7 +21,7 @@ _laptop addAction [localize "STR_MRH_ADDACTIONREPACK",{
  deleteVehicle _sat;
  deleteVehicle _laptop;
 // "B_Carryall_satellite" createVehicle _storepos;
-"B_Carryall_satellite" createVehicle (position player);
+"B_Carryall_satellite" createVehicle (player modelToWorld [0,1,0]);
 }];
 
 }] RemoteExec ["Spawn", 0, true];} 
@@ -37,7 +38,7 @@ _1 = localize "STR_MRH_ADDACTIONUSE";
 _action =["Utiliser", 
 _1,
 "\MRHSatellite\paa\satellite.paa", 
- { call MRH_fnc_SatInit;}, 
+ {[] call MRH_fnc_SatInit;}, 
  {true},
  {},
  [],
@@ -57,7 +58,7 @@ _2,
  deleteVehicle _sat;
  deleteVehicle _laptop;
 // "B_Carryall_satellite" createVehicle _storepos;
-"B_Carryall_satellite" createVehicle (position player);
+"B_Carryall_satellite" createVehicle (player modelToWorld [0,1,0]);
  }, 
  {true},
  {},

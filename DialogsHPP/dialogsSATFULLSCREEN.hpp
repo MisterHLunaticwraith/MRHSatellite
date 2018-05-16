@@ -82,7 +82,7 @@ class MRHSlider: RscSliderMRHSAT
 	    color[] = { 1, 1, 1, 1 }; 
         coloractive[] = { 1, 0, 0, 0.5 };
 	//onLoad = "call MRH_fnc_SetSatRange;";
-	onSliderPosChanged = "((findDisplay 9751) displayCtrl 1205) ctrlSetStructuredText parsetext (str (round (_this select 1))); _cam = player getVariable ""SATCAM""; _cam setPos [(getpos _cam select 0), (getpos _cam select 1), (_this select 1)];call MRH_fnc_GlobalCamMove;";
+	onSliderPosChanged = "((findDisplay 9751) displayCtrl 1205) ctrlSetStructuredText parsetext (str (round (_this select 1))); _cam = uinameSpace getVariable ""MRH_SATCAM""; _cam setPos [(getpos _cam select 0), (getpos _cam select 1), (_this select 1)];[player] call MRH_fnc_GlobalCamMove;";
 };
 /*
 	};
@@ -182,7 +182,7 @@ class MRHSClearButton: RscButtonSpecialMRHSAT
 {
 	idc = 6204;
 	show = true;
-	action = "uinameSpace setVariable ['tracking', false];publicVariable 'tracking'; uiNameSpace setVariable ['SatLaserOn' , false];publicVariable 'SatLaserOn';playSound 'TrackingDisabled';";
+	action = "uinameSpace setVariable ['tracking', false];publicVariable 'tracking'; missionNameSpace setVariable ['SatLaserOn', false];publicVariable 'SatLaserOn';playSound 'TrackingDisabled'; missionNameSpace setVariable ['MRH_Follow_tracking', false];publicVariable 'MRH_Follow_tracking';";
 	text = ""; //--- ToDo: Localize;
 	x = 0.10625 * safezoneW + safezoneX;
 	y = -0.00399999 * safezoneH + safezoneY;
