@@ -1,3 +1,4 @@
+ if (!isNull curatorCamera) ExitWith {};
  [] spawn {
  uinameSpace setVariable ["tracking", false];
  publicVariable "tracking";

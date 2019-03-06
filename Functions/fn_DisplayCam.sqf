@@ -1,4 +1,4 @@
-
+if (!isNull curatorCamera) ExitWith {};
 _camMRHSAT = uinameSpace getVariable "MRH_SATCAM";
 _pip = missionNamespace getVariable "SelectedViewMode";
 

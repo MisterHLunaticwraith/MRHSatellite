@@ -10,7 +10,7 @@
 */
 
 params ["_key"];
-
+if (!isNull curatorCamera) ExitWith {};
 _cam = uinameSpace getVariable "MRH_SATCAM";
 if (isNil "_cam") ExitWith {};
 _camtarget = missionNamespace getVariable "MRH_SATCAMTARGET";

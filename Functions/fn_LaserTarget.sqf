@@ -1,4 +1,5 @@
 [] spawn {
+if (!isNull curatorCamera) ExitWith {};
 playSound "LaseringTarget";
 ctrlshow [1270, true];
 _startpos = screenToWorld [0.5,0.5];

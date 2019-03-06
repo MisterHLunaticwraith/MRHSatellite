@@ -1,3 +1,4 @@
+if (!isNull curatorCamera) ExitWith {};
 _isCalledFromTablet = _this select 0;
 if (isNil "_isCalledFromTablet") then {_isCalledFromTablet = false;};
 //_handle = createdialog "MRHSatellite";
@@ -42,7 +43,7 @@ missionNamespace setVariable ["MRHSatFirstInitCheck", false];
 publicVariable "MRHSatFirstInitCheck";
 
 _UserInitSatPos = missionNamespace getVariable "MRHSatPos";
-_Marker = createMarker ["SatPosMarker", _UserInitSatPos];
+_Marker = createMarker ["SatPosMarker", [(_UserInitSatPos select 0), (_UserInitSatPos select 1)]];
 "SatPosMarker" setMarkerType "Satellite";
 "SatPosMarker" setMarkerText localize "STR_MRH_INITSATPOSMARKER";
 "SatPosMarker" setMarkerColor "ColorGreen";

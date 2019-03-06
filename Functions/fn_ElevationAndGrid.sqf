@@ -1,6 +1,6 @@
 [] spawn {
 disableSerialization;
-
+if (!isNull curatorCamera) ExitWith {};
 _camera = uinameSpace getVariable "MRH_SATCAM";
 
 

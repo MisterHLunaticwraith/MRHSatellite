@@ -1,4 +1,5 @@
 if (isServer && !hasInterface) ExitWith {};
+
 params ["_object"];
 [_object] spawn {
 params ["_object"];
@@ -12,7 +13,7 @@ waitUntil {(!isNull (findDisplay 46)) && alive player};
 _object setObjectTexture [0, "\MRHSatellite\Paa\offline.paa"];
 waitUntil {!isNull (uinameSpace getVariable "MRH_SATCAM")};//probably unnecessary
 waitUntil {!(missionNamespace getVariable "MRHSatFirstInitCheck")};
-
+if (!isNull curatorCamera) ExitWith {};
 _camMRHSAT = uinameSpace getVariable "MRH_SATCAM";
 
 _pip = missionNamespace getVariable "SelectedViewMode";

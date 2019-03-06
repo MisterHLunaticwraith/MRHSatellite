@@ -1,5 +1,5 @@
 params ["_selectedTarget"];
-
+if (!isNull curatorCamera) ExitWith {};
 [] spawn {
 disableSerialization;
 _tracking = true;

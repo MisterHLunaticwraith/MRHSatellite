@@ -1,9 +1,9 @@
 if (isServer && isDedicated && !hasInterface) exitWith {};
 
 _selectedPos = missionNamespace getVariable "MRHSatPos";
-_xresult = _selectedpos select 0;
-_yresult = _selectedpos select 1;
-_camMRHSAT = "camera" camCreate [_xresult,_yresult,300];
+//_xresult = _selectedpos select 0;
+//_yresult = _selectedpos select 1;
+_camMRHSAT = "camera" camCreate _selectedPos;
 
 
 

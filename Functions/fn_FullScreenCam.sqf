@@ -1,4 +1,5 @@
 [] spawn {
+if (!isNull curatorCamera) ExitWith {};
 _camMRHSAT = uinameSpace getVariable "MRH_SATCAM";
 //_pos = getPos _cam;
 

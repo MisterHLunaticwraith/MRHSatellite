@@ -1,4 +1,5 @@
 disableserialization;
+if (!isNull curatorCamera) ExitWith {};
 ctrlshow [1210, false];//lastedit2
 _isMoving = missionNamespace getVariable "MRHSatIsMoving";
 _totalTime = missionNamespace getVariable "MRHCalculatedTravelTime";
@@ -36,13 +37,18 @@ hint (localize "STR_MRH_HINTSATELLITEINPOS");
 missionNamespace setVariable ["MRHSatIsMoving", false];
 publicVariable "MRHSatIsMoving";
 _selectedPos = missionNamespace getVariable "RequestedSatPos";
-missionNamespace setVariable ["MRHSatPos", _selectedPos];
-publicVariable "MRHSatPos";
+_orgPos = missionNamespace getVariable "MRHSatPos";
+_altitude = _orgPos select 2;
+
+
 _posX = _selectedPos select 0;
 _posY = _selectedPos select 1;
 
 _cam = uinameSpace getVariable "MRH_SATCAM";
-_cam setPos [_posX , _posY, (getPos _cam select 2)];
+_cam setPosATL [_posX , _posY, _altitude];
+missionNamespace setVariable ["MRHSatPos", [_posX,_posY,_altitude],true];
+publicVariable "MRHSatPos";
+publicVariableServer "MRHSatPos";
 [player] call MRH_fnc_GlobalCamMove;
 call MRH_fnc_FirstSatMove;
 disableserialization;

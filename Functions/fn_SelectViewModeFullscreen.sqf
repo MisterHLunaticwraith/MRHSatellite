@@ -1,4 +1,5 @@
 params ["_selected"];
+if (!isNull curatorCamera) ExitWith {};
 _cam = uinameSpace getVariable "MRH_SATCAM";
 _viewMode = 0;
 disableSerialization;

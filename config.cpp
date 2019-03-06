@@ -64,14 +64,25 @@ class CfgFunctions
 #include "\MRHSatellite\DialogsHPP\dialogsTablet.hpp"
 class Extended_PostInit_EventHandlers
 {
-   class MRHSatInit
+
+   class MRHCheckAceInit
    {
       clientInit = "call compile preProcessFileLineNumbers '\MRHSatellite\Functions\fn_CheckForAce.sqf'";
+ 
    };
+   class MRHCreateSatCamWithDefaultPos
+   {
+		clientInit = "call compile preProcessFileLineNumbers '\MRHSatellite\Functions\fn_DefaultInitSatPos.sqf'";   
+   };
+
 };
 
 class Extended_PreInit_EventHandlers 
 {
+		class MRHSatServerSideInit
+   {
+	   serverInit = "call compile preProcessFileLineNumbers '\MRHSatellite\Functions\fn_serverInit.sqf'";
+   };
     class MRHSatKeyBinds 
 	{
         init = "call compile preProcessFileLineNumbers '\MRHSatellite\Functions\fn_KeyBinds.sqf'";

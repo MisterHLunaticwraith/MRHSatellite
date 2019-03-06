@@ -27,9 +27,7 @@ class MRH // Defines the "owner"
 		class LegacyCamDisplay
 		{};
 		class DefaultInitSatPos
-		{
-			postInit=1;
-		};
+		{};
 		class CalculateTime
 		{};
 		class MovingScreen
