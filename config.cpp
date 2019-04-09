@@ -2,14 +2,62 @@ class CfgPatches {
 	class MRHSatellite{
 		units[] = {
 		"MRH_SAT_BACKPACK",
-		"MRH_SAT_POSANDSPEEDINIT_MODULE"
+		"MRH_SAT_POSANDSPEEDINIT_MODULE",
+		"MRH_SatCom_Antenna_Base",
+		"MRH_SatCom_Antenna"
 		
 		
-		}; //
-		weapons[] = {"MRH_BluForTransponder","MRH_TacticalDisplay"}; //
-		requiredVersion = 0.1; //
-		requiredAddons[] = {"cba_settings","A3_Weapons_F_Ammoboxes"}; //
+		};
+		weapons[] = {"MRH_BluForTransponder","MRH_TacticalDisplay","MRH_FoldedSatcomAntenna"};
+		requiredVersion = 0.1;
+		requiredAddons[] = {"cba_main","A3_Weapons_F_Ammoboxes"};
+		version = 1.52.0;
+		versionStr = "1.52.0";
+		versionAr[] = {1,52,0};
+		versionDesc = "MRH Satellite";
+		versionAct = "";
+		author = "Mr H.";
+		url = "https://github.com/MisterHLunaticwraith/MRHSatellite/issues";
 	};
+};
+class CfgSettings {
+   class CBA {
+      class Versioning {
+         
+         class MRHSatellite {
+           // Optional: Manually specify the Main Addon for this mod
+           main_addon = "MRHSatellite"; // Uncomment and specify this to manually define the Main Addon (CfgPatches entry) of the mod
+
+           // Optional: Add a custom handler function triggered upon version mismatch
+           handler = ""; // Adds a custom script function that will be triggered on version mismatch. Make sure this function is compiled at a called preInit, not spawn/execVM
+
+           // Optional: Dependencies
+           // Example: Dependency on CBA
+           /*
+            class Dependencies {
+               CBA[]={"cba_main", {0,8,0}, "true"};
+            };
+           */
+
+           // Optional: Removed addons Upgrade registry
+           // Example: myMod_addon1 was removed and it's important the user doesn't still have it loaded
+           //removed[] = {"myMod_addon1"};
+		
+         };
+      };
+   };
+};
+class CfgMods {
+    class MRHSatellite {
+        dir = "@MRHSatellite";
+        name = "Mister H's Satellite";
+        picture = "A3\Ui_f\data\Logos\arma3_expansion_alpha_ca";
+        hidePicture = "true";
+        hideName = "true";
+        actionName = "Website";
+        action = "https://github.com/MisterHLunaticwraith/MRHSatellite/issues";
+        description = "Issue Tracker: https://github.com/MisterHLunaticwraith/MRHSatellite/issues";
+    };
 };
 
 	class CfgMarkerClasses

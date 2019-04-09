@@ -1777,6 +1777,7 @@ class RscMapControlMRHSAT {
 	scaleMax = 1.0;
 	scaleDefault = 0.16;
 	maxSatelliteAlpha = 0.85;
+	widthRailWay = 4;
 	alphaFadeStartScale = 2;
 	alphaFadeEndScale = 2;
 	sizeEx = "(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";

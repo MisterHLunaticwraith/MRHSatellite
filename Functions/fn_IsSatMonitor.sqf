@@ -25,3 +25,11 @@ _camMRHSAT camCommit 0;
 "rttMRHSatelliteFeed" setPiPEffect [_pip]; 
 _object setObjectTexture [0, "#(argb,512,512,1)r2t(rttMRHSatelliteFeed,1.0)"];
 };
+
+[_object] spawn {
+	params ["_object"];
+	waitUntil {time>1};
+	sleep 2;
+	_isSatConsole = _object getVariable ["MRH_Sat_isSatelliteConsole",false];
+	if !(_isSatConsole) then {_object setVariable ["MRH_Sat_isSatelliteScreen",true,true];};
+};

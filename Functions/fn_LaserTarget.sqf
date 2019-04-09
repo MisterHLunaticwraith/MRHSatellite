@@ -7,6 +7,8 @@ _virtualTarget = "Land_HelipadEmpty_F" createVehicle _startpos;
 _laserTarget = "LaserTargetW" createVehicle _startpos;
 _laserTarget attachto [_virtualTarget,[0,0,0]];
 _laseron = true;
+
+["mrh_satellite_lasering", [_laserTarget]] call CBA_fnc_localEvent;
 missionNameSpace setVariable ["SatLaserOn" , true];
 publicVariable "SatLaserOn";
 ///

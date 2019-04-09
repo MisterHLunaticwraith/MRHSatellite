@@ -1,5 +1,5 @@
 class Items_base_F;
-class MRH_SatCom_Antenna: Items_base_F {
+class MRH_SatCom_Antenna_Base: Items_base_F {
 	author = "Mr H";
 	mapSize = 0.07;
 	class SimpleObject {
@@ -12,8 +12,8 @@ class MRH_SatCom_Antenna: Items_base_F {
 	};
 	editorPreview = "\MRHSatellite\Models\Antenna\antennapreview.jpg";
 	//_generalMacro = "Land_BottlePlastic_V2_F";
-	scope = 2;
-	scopeCurator = 2;
+	scope = 1;
+	scopeCurator = 0;
 	displayName = $STR_MRH_CFGANTENNADISPLAYNAME;
 	model = "\MRHSatellite\Models\Antenna\antennaMERGE.p3d";
 	
@@ -27,6 +27,18 @@ class MRH_SatCom_Antenna: Items_base_F {
 	hiddenSelectionTextures[] = {};
 	// ThingX
 	simulation = "thingX";
+	////
+
+
+	
+	
+};
+
+class MRH_SatCom_Antenna: MRH_SatCom_Antenna_Base {
+
+	scope = 2;
+	scopeCurator = 2;
+
 	////
 	ace_dragging_canDrag = 1;  // Can be dragged (0-no, 1-yes)
         ace_dragging_dragPosition[] = {0, 1.2, 0};  // Offset of the model from the body while dragging (same as attachTo)

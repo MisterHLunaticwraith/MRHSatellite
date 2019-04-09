@@ -3,10 +3,13 @@ _bag = player getVariable "SourceBag";
 _pos = player getVariable "SourceBagPos";
 _laptop = "Land_Laptop_device_F" createVehicle (player modelToWorld [0,1,0]);
 _laptop setDir ((getDir _laptop)-180);
-_sat = "Land_SatelliteAntenna_01_F" createVehicle (_laptop modelToWorld [2, -0.5, 0.8]);
-_sat setDir ((getDir _laptop)-360 + 180);
+_sat = "MRH_SatCom_Antenna_Base" createVehicle (_laptop modelToWorld [0.7, -0.5, 0.8]); //[2, -0.5, 0.8]);
+_sat setDir (getDir _laptop); //-360 + 180); //-360 + 180);
 _laptop setVariable ["LinkedAntenna", _sat]; 
 deleteVehicle objectParent _bag;
+
+["mrh_satellite_satBagDeployed", [_laptop,_sat]] call CBA_fnc_localEvent;
+
 
 if !(HASACE3) then {[
 [_laptop],{
@@ -21,7 +24,8 @@ _laptop addAction [localize "STR_MRH_ADDACTIONREPACK",{
  deleteVehicle _sat;
  deleteVehicle _laptop;
 // "B_Carryall_satellite" createVehicle _storepos;
-"B_Carryall_satellite" createVehicle (player modelToWorld [0,1,0]);
+_bag = "B_Carryall_satellite" createVehicle (player modelToWorld [0,1,0]);
+["mrh_satellite_satBagRepacked", [_bag]] call CBA_fnc_localEvent;
 }];
 
 }] RemoteExec ["Spawn", 0, true];} 
@@ -58,7 +62,8 @@ _2,
  deleteVehicle _sat;
  deleteVehicle _laptop;
 // "B_Carryall_satellite" createVehicle _storepos;
-"B_Carryall_satellite" createVehicle (player modelToWorld [0,1,0]);
+_bag = "B_Carryall_satellite" createVehicle (player modelToWorld [0,1,0]);
+["mrh_satellite_satBagRepacked", [_bag]] call CBA_fnc_localEvent;
  }, 
  {true},
  {},

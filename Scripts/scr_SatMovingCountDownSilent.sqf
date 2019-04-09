@@ -60,3 +60,4 @@ ctrlshow [1210, false];////lastedit1
 "SatPosMarker" setMarkerText (localize "STR_MRH_PRESENTPOSITIONMARKER");
 "SatPosMarker" setMarkerColor "ColorGreen";
 "SatPosMarker" setMarkerAlpha 1;
+["mrh_satellite_satInPosition", [_selectedPos]] call CBA_fnc_localEvent;
