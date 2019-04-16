@@ -594,6 +594,32 @@
 				<French>Tablette tactique utilisée pour se connecter au réseau satellite.</French>
 				<German>Universal Tactical Display um zum Satellitennetzwerk zu verbinden</German>
 			</Key>
+			<Key ID="STR_MRH_SAT_isSatConsoleATT">
+				<Original>Is satellite control console</Original>
+				<English>Is satellite control console</English>
+				<French>Est une console de contrôle du satellite</French>
+			</Key>
+			<Key ID="STR_MRH_SAT_isSatConsoleATTTooltip">
+				<Original>If enabled, will make this object a satellite control console</Original>
+				<English>If enabled, will make this object a satellite control console</English>
+				<French>Si vous cochez cette case cet objet sera un point d'accés au contrôle du satellite</French>
+			</Key>
+			<Key ID="STR_MRH_SAT_isSatScreenAtt">
+				<Original>Is satellite screen</Original>
+				<English>Is satellite screen</English>
+				<French>Retransmet le flux vidéo du satellite</French>
+			</Key>
+			<Key ID="STR_MRH_SAT_isSatScreenAttToolTip">
+				<Original>If enabled, this object will display the satellite feed. Unnecessary if object is already control console.</Original>
+				<English>If enabled, this object will display the satellite feed. Unnecessary if object is already control console.</English>
+				<French>Si vous cochez cette case cet objet retransmettra le flux video du satellite. Intile de cocher si l'objet est déjà console de contrôle.</French>
+			</Key>
+			<Key ID="STR_MRH_SAT_">
+				<Original></Original>
+				<English></English>
+				<French></French>
+			</Key>
+			
 
 
 
