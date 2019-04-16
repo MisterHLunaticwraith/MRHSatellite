@@ -75,3 +75,69 @@ class B_Carryall_Base;
 		};
 		
 	};
+
+#define ATTRIBUTES_MACRO class Attributes \
+{ \
+			class MRH_isSatelitteConsole \
+                    { \
+                        displayName = $STR_MRH_SAT_isSatConsoleATT; \
+                        tooltip = $STR_MRH_SAT_isSatConsoleATTTooltip; \
+                        property = "mrh_isSatelliteCtrlCs"; \
+                        control = "Checkbox"; \
+                        expression = "_this setVariable ['%s',_value];[_this] call MRH_fnc_objectAttributesConsole"; \
+                        defaultValue = false; \
+                        unique = 0; \
+                        validate = "none";\
+                        condition = "objectobject";\
+                        typeName = "BOOL";\
+                    }; \
+			class MRH_isSatelitteScreen \
+                    { \
+                        displayName = $STR_MRH_SAT_isSatScreenAtt; \
+                        tooltip = $STR_MRH_SAT_isSatScreenAttToolTip; \
+                        property = "mrh_isSatScreen"; \
+                        control = "Checkbox"; \
+                        expression = "_this setVariable ['%s',_value];[_this] call MRH_fnc_objectAttributesScreen"; \
+                        defaultValue = false; \
+                        unique = 0; \
+                        validate = "none"; \
+                        condition = "objectHasInventoryCargo"; \
+                        typeName = "BOOL"; \
+                    }; \
+		};
+class Items_base_F;
+
+class Land_Laptop_unfolded_F : Items_base_F
+{
+	ATTRIBUTES_MACRO
+};
+
+class Land_Laptop_02_F :Items_base_F
+{
+	ATTRIBUTES_MACRO
+};
+
+class Land_PCSet_01_screen_F : Items_base_F
+{
+	ATTRIBUTES_MACRO
+};
+
+class Land_FlatTV_01_F : Items_base_F
+{
+	ATTRIBUTES_MACRO
+};
+
+class Land_TripodScreen_01_dual_v1_F : Items_base_F
+{
+	ATTRIBUTES_MACRO
+};
+
+class Land_TripodScreen_01_dual_v2_F : Items_base_F
+{
+	ATTRIBUTES_MACRO
+};
+
+class Land_TripodScreen_01_large_F : Items_base_F
+{
+	ATTRIBUTES_MACRO
+};

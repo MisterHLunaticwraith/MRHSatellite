@@ -1,4 +1,4 @@
-class Items_base_F;
+//class Items_base_F; //already declared in cfg veh 
 class MRH_SatCom_Antenna_Base: Items_base_F {
 	author = "Mr H";
 	mapSize = 0.07;

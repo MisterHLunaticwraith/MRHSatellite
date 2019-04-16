@@ -11,9 +11,9 @@ class CfgPatches {
 		weapons[] = {"MRH_BluForTransponder","MRH_TacticalDisplay","MRH_FoldedSatcomAntenna"};
 		requiredVersion = 0.1;
 		requiredAddons[] = {"cba_main","A3_Weapons_F_Ammoboxes"};
-		version = 1.52.0;
-		versionStr = "1.52.0";
-		versionAr[] = {1,52,0};
+		version = 1.52.01;
+		versionStr = "1.52.01";
+		versionAr[] = {1,52,01};
 		versionDesc = "MRH Satellite";
 		versionAct = "";
 		author = "Mr H.";

@@ -100,6 +100,11 @@ class MRH // Defines the "owner"
 		{};
 		class foldAntenna
 		{};
+		class objectAttributesScreen
+		{};
+		class objectAttributesConsole
+		{};
+
 
 
 

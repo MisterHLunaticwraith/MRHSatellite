@@ -8,7 +8,7 @@ params ["_laptop"];
 params ["_laptop"];
 //waituntil mission is initialized
 waitUntil {time>1};
-_laptop setVariable ["MRH_Sat_isSatelliteConsole",false,true];
+_laptop setVariable ["MRH_Sat_isSatelliteConsole",true,true];
 if !(HASACE3) then {
 _laptop addAction [localize "STR_MRH_ADDACTIONUSE",{[]call MRH_fnc_SatInit;}];
 [_laptop] call MRH_fnc_isSatMonitor;
