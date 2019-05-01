@@ -84,7 +84,7 @@ class B_Carryall_Base;
                         tooltip = $STR_MRH_SAT_isSatConsoleATTTooltip; \
                         property = "mrh_isSatelliteCtrlCs"; \
                         control = "Checkbox"; \
-                        expression = "_this setVariable ['%s',_value];[_this] call MRH_fnc_objectAttributesConsole"; \
+                        expression = "_this setVariable ['%s',_value,true];[[_this],MRH_fnc_objectAttributesConsole] RemoteExec ['Call',0,true]"; \
                         defaultValue = false; \
                         unique = 0; \
                         validate = "none";\
@@ -97,7 +97,7 @@ class B_Carryall_Base;
                         tooltip = $STR_MRH_SAT_isSatScreenAttToolTip; \
                         property = "mrh_isSatScreen"; \
                         control = "Checkbox"; \
-                        expression = "_this setVariable ['%s',_value];[_this] call MRH_fnc_objectAttributesScreen"; \
+                        expression = "_this setVariable ['%s',_value];[[_this],MRH_fnc_objectAttributesScreen] RemoteExec ['Call',0,true]"; \
                         defaultValue = false; \
                         unique = 0; \
                         validate = "none"; \
