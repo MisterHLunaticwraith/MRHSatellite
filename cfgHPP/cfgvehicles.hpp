@@ -6,13 +6,14 @@ class B_Carryall_Base;
 		access=1;
 		scope=2;
 		displayName= $STR_MRH_SATELLITEBAGDISPLAYNAME;
-		hiddenSelectionsTextures[]=
-		{
-			"\A3\weapons_f\ammoboxes\bags\data\backpack_tortila_oli_co.paa"
-		};
-		picture="\A3\Weapons_F\Ammoboxes\Bags\data\UI\icon_B_C_Tortila_oucamo.paa";
-		editorPreview="\A3\EditorPreviews_F\Data\CfgVehicles\Default\Prop.jpg";
+		
+		picture="\MRHSatellite\Models\Backpack\BackPackIcon.paa";
+		editorPreview="\MRHSatellite\Models\Backpack\BackPackEditor.jpg";
 		editorSubcategory="EdSubcat_Backpacks";
+		model = "\MRHSatellite\Models\Backpack\SatBackPack.p3d";
+		hiddenSelections[] = {"Camo"};
+        hiddenSelectionsTextures[] = {"\MRHSatellite\Models\Backpack\F_Backpack_co.paa"};
+		//hiddenSelectionMaterials[] = {"\MRHSatellite\Models\Backpack\F_Backpack.rvmat"};
 		faction="BLU_F";
 		mass=440; // =20kg
 		//dlc="backpack";
@@ -138,6 +139,16 @@ class Land_TripodScreen_01_dual_v2_F : Items_base_F
 };
 
 class Land_TripodScreen_01_large_F : Items_base_F
+{
+	ATTRIBUTES_MACRO
+};
+
+class Land_MultiScreenComputer_01_base_F : Items_base_F
+{
+	ATTRIBUTES_MACRO
+};
+
+class Land_Laptop_03_base_F : Items_base_F
 {
 	ATTRIBUTES_MACRO
 };
