@@ -1,19 +1,20 @@
 class CfgPatches {
 	class MRHSatellite{
 		units[] = {
-		"MRH_SAT_BACKPACK",
+		"B_Carryall_satellite",
 		"MRH_SAT_POSANDSPEEDINIT_MODULE",
 		"MRH_SatCom_Antenna_Base",
-		"MRH_SatCom_Antenna"
+		"MRH_SatCom_Antenna",
+		"MRH_SAT_protectiveCase"
 		
 		
 		};
 		weapons[] = {"MRH_BluForTransponder","MRH_TacticalDisplay","MRH_FoldedSatcomAntenna"};
 		requiredVersion = 0.1;
 		requiredAddons[] = {"cba_main","A3_Weapons_F_Ammoboxes"};
-		version = 1.52.2;
-		versionStr = "1.52.2";
-		versionAr[] = {1,52,2};
+		version = 1.52.3;
+		versionStr = "1.52.3";
+		versionAr[] = {1,52,3};
 		versionDesc = "MRH Satellite";
 		versionAct = "";
 		author = "Mr H.";
@@ -78,6 +79,7 @@ class cfgVehicles
 #include"\MRHSatellite\cfgHPP\cfgvehicles.hpp"
 #include"\MRHSatellite\cfgHPP\cfgmodules.hpp"
 #include "\MRHSatellite\Models\Antenna\antenna.hpp"
+#include "\MRHSatellite\Models\Case\protectiveCase.hpp"
 };
 
 class CfgFactionClasses

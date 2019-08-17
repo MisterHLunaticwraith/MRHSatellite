@@ -1,7 +1,8 @@
 #include "MRH_components.hpp"
 _bag = player getVariable "SourceBag";
 _pos = player getVariable "SourceBagPos";
-_laptop = "Land_Laptop_device_F" createVehicle (player modelToWorld [0,1,0]);
+//_laptop = "Land_Laptop_device_F" createVehicle (player modelToWorld [0,1,0]);
+_laptop = "Land_MultiScreenComputer_01_black_F" createVehicle (player modelToWorld [0,1,0]);
 _laptop setDir ((getDir _laptop)-180);
 _sat = "MRH_SatCom_Antenna_Base" createVehicle (_laptop modelToWorld [0.7, -0.5, 0.8]); //[2, -0.5, 0.8]);
 _sat setDir (getDir _laptop); //-360 + 180); //-360 + 180);

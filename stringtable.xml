@@ -614,6 +614,12 @@
 				<English>If enabled, this object will display the satellite feed. Unnecessary if object is already control console.</English>
 				<French>Si vous cochez cette case cet objet retransmettra le flux video du satellite. Intile de cocher si l'objet est déjà console de contrôle.</French>
 			</Key>
+			
+			<Key ID="STR_MRH_SAT_ObjectsCrate">
+				<Original>Satellite gear crate</Original>
+				<English>Satellite gear crate</English>
+				<French>Caisse de matériel liaison satellite</French>
+			</Key>
 			<Key ID="STR_MRH_SAT_">
 				<Original></Original>
 				<English></English>
