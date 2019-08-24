@@ -152,3 +152,4 @@ class Land_Laptop_03_base_F : Items_base_F
 {
 	ATTRIBUTES_MACRO
 };
+

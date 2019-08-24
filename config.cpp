@@ -3,6 +3,7 @@ class CfgPatches {
 		units[] = {
 		"B_Carryall_satellite",
 		"MRH_SAT_POSANDSPEEDINIT_MODULE",
+		"MRH_VirtualSatelliteEntity",
 		"MRH_SatCom_Antenna_Base",
 		"MRH_SatCom_Antenna",
 		"MRH_SAT_protectiveCase"
@@ -12,9 +13,9 @@ class CfgPatches {
 		weapons[] = {"MRH_BluForTransponder","MRH_TacticalDisplay","MRH_FoldedSatcomAntenna"};
 		requiredVersion = 0.1;
 		requiredAddons[] = {"cba_main","A3_Weapons_F_Ammoboxes"};
-		version = 1.52.3;
-		versionStr = "1.52.3";
-		versionAr[] = {1,52,3};
+		version = 1.52.4;
+		versionStr = "1.52.4";
+		versionAr[] = {1,52,4};
 		versionDesc = "MRH Satellite";
 		versionAct = "";
 		author = "Mr H.";

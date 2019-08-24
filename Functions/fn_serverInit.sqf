@@ -22,6 +22,8 @@ if (isNil "_UserInitSatSpeed") then {_satSpeed = 100;}
 else {_satSpeed = _UserInitSatSpeed;};
 missionNamespace setVariable ["MRHSatSpeed", _satSpeed,true];
 publicVariable "MRHSatSpeed";
+// added in ALiVE compat update 
+call MRH_fnc_MRH_Satellite_CreateCameraCurator;
 
 missionNamespace setVariable ["MRH_SAT_ServerInitDone",true, true];
 publicVariable "MRH_SAT_ServerInitDone";

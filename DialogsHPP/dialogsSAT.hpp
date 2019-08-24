@@ -13,11 +13,11 @@ class MRHSatellite
 class MRHLaptopSat: RscPictureMRHSAT
 {
 	idc = 1200;
-	text = "\MRHSatellite\Paa\laptop.paa";
-	x = 0.00125001 * safezoneW + safezoneX;
-	y = -0.00399999 * safezoneH + safezoneY;
-	w = 1.01719 * safezoneW;
-	h = 1.008 * safezoneH;
+	text = "\MRHSatellite\Paa\laptop_ca.paa";
+	x = 0 * safezoneW + safezoneX;
+	y = 0 * safezoneH + safezoneY;
+	w = 1 * safezoneW;
+	h = 1 * safezoneH;
 };
 class MRHScreenzone: RscPictureMRHSAT
 {
