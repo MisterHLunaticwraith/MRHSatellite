@@ -16,3 +16,5 @@ _camMRHSAT camSetFov 1;
 _camMRHSAT camCommit 0;
 uiNameSpace setVariable ["MRH_SATCAM", _camMRHSAT];
 
+//[[_camMRHSAT],MRH_fnc_MRH_Satellite_CreateCameraCurator] RemoteExec ["Call",2];
+

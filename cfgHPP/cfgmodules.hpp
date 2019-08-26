@@ -48,5 +48,14 @@
         };
     };
 
-
+class ModuleCurator_F;
+class MRH_VirtualSatelliteEntity : ModuleCurator_F
+	{
+			scope = 1;				// Editor visibility; 2 will show it in the menu, 1 will hide it.
+			scopeCurator = 1;		// Curator visibility; 2 will show it in the menu, 1 will hide it.
+			_generalMacro = "ModuleCurator_F";
+			displayName = "Virtual Satellite Entity";
+			icon = "\MRHSatellite\Paa\satellite.paa";
+			portrait = "\MRHSatellite\Paa\satellite.paa";
+	};
 

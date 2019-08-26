@@ -104,6 +104,8 @@ class MRH // Defines the "owner"
 		{};
 		class objectAttributesConsole
 		{};
+		class MRH_Satellite_CreateCameraCurator
+		{};
 
 
 
