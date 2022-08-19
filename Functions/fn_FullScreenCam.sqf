@@ -35,13 +35,13 @@ _handle = createdialog "MRHSatelliteFullSCreen";
 call MRH_fnc_SetSatRange;
 _ctrlCOMBO = ((findDisplay 9751) displayCtrl 2100);
 _ctrlCOMBO lbadd "Normal";
-lbSetData [2100, 0, 0];
+lbSetData [2100, 0, "#1"];
 
 _ctrlCOMBO lbadd localize "STR_MRH_FLIRWHOT";
-lbSetData [2100, 1, 1];
+lbSetData [2100, 1, "#2"];
 
 _ctrlCOMBO lbadd localize "STR_MRH_FLIRBHOT";
-lbSetData [2100, 2, 2]; 
+lbSetData [2100, 2, "#3"]; 
 call MRH_fnc_Compass;
 call MRH_fnc_ElevationAndGrid;
 

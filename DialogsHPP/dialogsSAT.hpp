@@ -51,7 +51,7 @@ class MRHMarkings: RscPictureMRHSAT
 class MRHAltitudeName: RscStructuredTextMRHSAT
 {
 	idc = 1204;
-	show = false
+	show = false;
 	text = "Altitude";
 	x = 0.63125 * safezoneW + safezoneX;
 	y = 0.192 * safezoneH + safezoneY;
@@ -61,7 +61,7 @@ class MRHAltitudeName: RscStructuredTextMRHSAT
 class MRHAltitudeDisplay: RscStructuredTextMRHSAT
 {
 	idc = 1205;
-	show = false
+	show = false;
 	text = "AltDisplay";
 	x = 0.63125 * safezoneW + safezoneX;
 	y = 0.22 * safezoneH + safezoneY;
@@ -71,7 +71,7 @@ class MRHAltitudeDisplay: RscStructuredTextMRHSAT
 class MRHViewModeName: RscStructuredTextMRHSAT
 {
 	idc = 1206;
-	show = false
+	show = false;
 	text = "View Mode";
 	x = 0.63125 * safezoneW + safezoneX;
 	y = 0.248 * safezoneH + safezoneY;
@@ -81,7 +81,7 @@ class MRHViewModeName: RscStructuredTextMRHSAT
 class MRHViewModeDisplay: RscStructuredTextMRHSAT
 {
 	idc = 1207;
-	show = false
+	show = false;
 	text = "ViewDisplay";
 	x = 0.63125 * safezoneW + safezoneX;
 	y = 0.276 * safezoneH + safezoneY;
@@ -102,9 +102,9 @@ class MRHFullScreenButton: RscButtonMRHSAT
 class MRHSlider: RscSliderMRHSAT
 {
 	idc = 1202;
-	show = false
-	 type = CT_SLIDER; 
-	 style = SL_VERT;
+	show = false;
+	type = CT_SLIDER; 
+	style = SL_VERT;
 	x = 0.716563 * safezoneW + safezoneX;
 	y = 0.122 * safezoneH + safezoneY;
 	w = 0.0328125 * safezoneW;
@@ -228,7 +228,7 @@ class MRHRefuseButton: RscButtonMRHSAT
 	idc = 5004;
 
 	text = $STR_MRH_CANCEL; //--- ToDo: Localize;
-	action = "ctrlshow [5001, false];"                //"Closedialog ((findDisplay 9751 5001;";
+	action = "ctrlshow [5001, false];";                //"Closedialog ((findDisplay 9751 5001;";
 	x = 0.52625 * safezoneW + safezoneX;
 	y = 0.416 * safezoneH + safezoneY;
 	w = 0.0525 * safezoneW;

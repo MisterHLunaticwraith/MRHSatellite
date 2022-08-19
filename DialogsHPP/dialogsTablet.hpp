@@ -303,7 +303,7 @@ class MRHRefuseButton: RscButtonMRHSAT
 	moving = true;
 
 	text = $STR_MRH_CANCEL; //--- ToDo: Localize;
-	action = "ctrlshow [5001, false];"                //"Closedialog ((findDisplay 9751 5001;";
+	action = "ctrlshow [5001, false];";                //"Closedialog ((findDisplay 9751 5001;";
 	x = 0.519688 * safezoneW + safezoneX;
 	y = 0.556 * safezoneH + safezoneY;
 	w = 0.0525 * safezoneW;
