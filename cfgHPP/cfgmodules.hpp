@@ -24,7 +24,7 @@
                 displayName = $STR_MRH_SATSPEEDDISPLAYNAME;
                 description = $STR_MRH_SATSPEEDSETTINGDESCRIPTION;
 				//tooltip = "Vitesse de déplacement du satellite en km/h(défaut 100kmh)";
-                defaultValue = "100";
+                defaultValue = "1000";
             };
 
         };
